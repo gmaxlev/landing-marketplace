@@ -1,0 +1,116 @@
+.review {
+  padding: 50px 103px 65px;
+  background-color: #f5f4f4;
+  position: relative;
+  @include media-breakpoint-down(xs) {
+    padding: 50px 20px;
+  }
+  &::after {
+    content: "";
+    background-color: $color-b;
+    height: 5px;
+    position: absolute;
+    top: 20px;
+    width: calc(100% - 124px);
+    right: 20px;
+    @include media-breakpoint-down(xs) {
+      top: 10px;
+      right: 10px;
+      width: calc(100% - 80px);
+    }
+  }
+  &::before {
+    content: "";
+    background-color: $color-b;
+    width: 5px;
+    height: calc(100% - 100px);
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    @include media-breakpoint-down(xs) {
+      right: 10px;
+      top: 10px;
+      height: calc(100% - 75px);
+    }
+  }
+}
+.review__author {
+  font-weight: 800;
+  color: $color-b;
+  font-size: 1.125rem;
+  line-height: 1.625rem;
+  @include media-breakpoint-down(xs) {
+    font-size: 1rem;
+  }
+}
+.review__text {
+  line-height: 1.625rem;
+  margin-bottom: 25px;
+  @include media-breakpoint-down(xs) {
+    margin-bottom: 15px;
+  }
+}
+.review__quotes {
+  img {
+    @include media-breakpoint-down(md) {
+      width: 70px;
+    }
+    @include media-breakpoint-down(xs) {
+      width: 45px;
+    }
+    &:first-child {
+      position: absolute;
+      top: 30px;
+      left: -14px;
+      @include media-breakpoint-down(md) {
+        top: 20px;
+        left: 8px;
+      }
+      @include media-breakpoint-down(xs) {
+        top: 13px;
+        left: 11px;
+      }
+    }
+    &:last-child {
+      position: absolute;
+      bottom: -5px;
+      right: 26px;
+      @include media-breakpoint-down(md) {
+        bottom: -4px;
+        right: 9px;
+      }
+      @include media-breakpoint-down(xs) {
+        bottom: 2px;
+        right: 15px;
+      }
+    }
+  }
+}
+.review__left {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 100%;
+  width: 120px;
+  background-color: #f5f4f4;
+  z-index: -1;
+  @include media-breakpoint-down(md) {
+    display: none;
+  }
+}
+
+.review__bline {
+  background-color: $color-b;
+  height: 5px;
+  position: absolute;
+  width: calc(100% - 20px);
+  left: -100px;
+  bottom: 20px;
+  @include media-breakpoint-down(md) {
+    width: calc(100% - 110px);
+    left: 20px;
+  }
+  @include media-breakpoint-down(xs) {
+    width: calc(100% - 94px);
+  }
+}

@@ -12,8 +12,15 @@ html(lang="ru")
         title Title
 
         link(rel="stylesheet", href="css/main.css")
+        link(rel="stylesheet", href="vendor/swiper/swiper.min.css")
+        link(rel="stylesheet", href="vendor/fancybox/jquery.fancybox.min.css")
+        link(rel="stylesheet", href="vendor/animate.min.css")
         
         script(src="vendor/jquery.min.js")
+        script(src="vendor/swiper/swiper.min.js")
+        script(src="vendor/jquery.validate.min.js")
+        script(src="vendor/fancybox/jquery.fancybox.min.js")
+        script(src="vendor/wow.min.js")
 
         // =====================
         // ЗАГРУЗКА SVG СПРАЙТОВ
@@ -36,3 +43,756 @@ html(lang="ru")
         // =========================
             
     body
+
+        .wrapper
+
+            // ====================
+            // МОДАЛЬНОЕ ОКНО ФОРМА
+            // ====================
+            .modal#modal-1
+                .modal__window
+                    .modal__content
+                        .modal-window
+                            .modal-form
+                                .modal-form__header Заполните форму
+                                .modal-form__subheader Мы свяжемся с Вами в ближайшее время
+                                form.modal-form__form.form-modal-1(name="Форма №1")
+                                    .modal-form__input
+                                        .input-text
+                                            input(type="text", name="name", placeholder="Ваше имя")
+                                    .modal-form__input
+                                        .input-text
+                                            input(type="text", name="phone", placeholder="Ваш номер телефона")
+                                    .modal-form__input
+                                        .input-text
+                                            input(type="text", name="email", placeholder="Ваш e-mail")
+                                    .modal-form__act
+                                        .order-places
+                                            .order-places__button
+                                                button.button.button_a
+                                                    span Зарегистрироваться
+                                            .order-places__count 7 мест
+                                .form-send-error Ошибка. Не удалось отправить форму.
+                                .form-send-success Спасибо!<br> Ожидайте звонок.
+                        .modal-window__close
+            // ========================
+            // END МОДАЛЬНОЕ ОКНО ФОРМА
+            // ========================
+            
+            // =========================
+            // МОДАЛЬНОЕ ОКНО РАСПИСАНИЕ
+            // =========================
+            .modal#modal-2
+                .modal__window
+                    .modal__content
+                        .modal-window
+                            .modal-timetable
+                                .modal-timetable__nav
+                                    span.modal-timetable__active 1 день
+                                    span 2 день
+                                    span 3 день
+                                    span Бонус
+                                .modal-timetable__about
+                                    .modal-timetable__item
+                                        .dayabout
+                                            .dayabout__name 1 день
+                                            .dayabout__content
+                                                .dayabout__header Правильная структура XML файла с каталогом товаров
+                                                .dayabout__list
+                                                    ol.number-list
+                                                        li.number-list__item
+                                                            .number-list__number 1
+                                                            |Как ускорить выгрузку товаров, выбрав правильную систему наполнения магазина на Розетке 
+                                                        li.number-list__item
+                                                            .number-list__number 2
+                                                            |Что такое идеальная структура XML файла
+                                                        li.number-list__item
+                                                            .number-list__number 3
+                                                            |Обязательные и дополнительные параметры XML 
+                                                        li.number-list__item
+                                                            .number-list__number 4
+                                                            |Создание идеальной структуры XML файла
+                                                        li.number-list__item
+                                                            .number-list__number 5
+                                                            |Соответствие категорий поставшика с категориями Розетки 
+                                                        li.number-list__item
+                                                            .number-list__number 6
+                                                            |Как все сделать за 5 минут с помощью MarketPlaceConvert
+                                    .modal-timetable__item
+                                        .dayabout
+                                            .dayabout__name 2 день
+                                            .dayabout__content
+                                                .dayabout__header Правильная структура XML файла с каталогом товаров
+                                                .dayabout__list
+                                                    ol.number-list
+                                                        li.number-list__item
+                                                            .number-list__number 1
+                                                            |Как ускорить выгрузку товаров, выбрав правильную систему наполнения магазина на Розетке 
+                                                        li.number-list__item
+                                                            .number-list__number 2
+                                                            |Что такое идеальная структура XML файла
+                                                        li.number-list__item
+                                                            .number-list__number 3
+                                                            |Обязательные и дополнительные параметры XML 
+                                                        li.number-list__item
+                                                            .number-list__number 4
+                                                            |Создание идеальной структуры XML файла
+                                                        li.number-list__item
+                                                            .number-list__number 5
+                                                            |Соответствие категорий поставшика с категориями Розетки 
+                                                        li.number-list__item
+                                                            .number-list__number 6
+                                                            |Как все сделать за 5 минут с помощью MarketPlaceConvert
+                                    .modal-timetable__item
+                                        .dayabout
+                                            .dayabout__name 3 день
+                                            .dayabout__content
+                                                .dayabout__header Правильная структура XML файла с каталогом товаров
+                                                .dayabout__list
+                                                    ol.number-list
+                                                        li.number-list__item
+                                                            .number-list__number 1
+                                                            |Как ускорить выгрузку товаров, выбрав правильную систему наполнения магазина на Розетке 
+                                                        li.number-list__item
+                                                            .number-list__number 2
+                                                            |Что такое идеальная структура XML файла
+                                                        li.number-list__item
+                                                            .number-list__number 3
+                                                            |Обязательные и дополнительные параметры XML 
+                                                        li.number-list__item
+                                                            .number-list__number 4
+                                                            |Создание идеальной структуры XML файла
+                                                        li.number-list__item
+                                                            .number-list__number 5
+                                                            |Соответствие категорий поставшика с категориями Розетки 
+                                                        li.number-list__item
+                                                            .number-list__number 6
+                                                            |Как все сделать за 5 минут с помощью MarketPlaceConvert
+                                    .modal-timetable__item
+                                        .dayabout
+                                            .dayabout__name Бонус
+                                            .dayabout__content
+                                                .dayabout__header Правильная структура XML файла с каталогом товаров
+                                                .dayabout__list
+                                                    ol.number-list
+                                                        li.number-list__item
+                                                            .number-list__number 1
+                                                            |Как ускорить выгрузку товаров, выбрав правильную систему наполнения магазина на Розетке 
+                                                        li.number-list__item
+                                                            .number-list__number 2
+                                                            |Что такое идеальная структура XML файла
+                                                        li.number-list__item
+                                                            .number-list__number 3
+                                                            |Обязательные и дополнительные параметры XML 
+                                                        li.number-list__item
+                                                            .number-list__number 4
+                                                            |Создание идеальной структуры XML файла
+                                                        li.number-list__item
+                                                            .number-list__number 5
+                                                            |Соответствие категорий поставшика с категориями Розетки 
+                                                        li.number-list__item
+                                                            .number-list__number 6
+                                                            |Как все сделать за 5 минут с помощью MarketPlaceConvert
+                        .modal-window__close
+            // =============================
+            // END МОДАЛЬНОЕ ОКНО РАСПИСАНИЕ
+            // =============================
+
+            // =============
+            // MOBILE HEADER
+            // =============
+            .mobheader
+                .container.mobheader__container
+                    .mobheader__logo
+                        img(src="img/logo.svg", alt="")
+                    .mobheader__contacts
+                        a(href="tel:0686619116") +38 (068) 661 91 16
+                        a(href="tel:0939564286") +38 (093) 956 42 86
+                    .mobheader__menu
+                        button.open-mobile-menu
+                            +svg-sprite('svg_sprite_hamburger', 'svg-sprite svg-sprite_open')
+                            +svg-sprite('svg_sprite_close', 'svg-sprite svg-sprite_close')
+            // =================
+            // END MOBILE HEADER
+            // =================
+
+            // ===========
+            // MOBILE MENU
+            // ===========
+            ul.mobmenu
+                li.mobmenu__item
+                    a(href="" data-scrollto="scroll-1") Обо мне
+                li.mobmenu__item
+                    a(href="" data-scrollto="scroll-2") Отзывы
+                li.mobmenu__item
+                    a(href="" data-scrollto="scroll-3") Программа
+                li.mobmenu__item
+                    a(href="" data-scrollto="scroll-4") Для кого
+                li.mobmenu__item
+                    a(href="" data-scrollto="scroll-5") Ответы на вопросы
+            // ===============
+            // END MOBILE MENU
+            // ===============
+
+            .first-screen
+                // ======
+                // HEADER
+                // ======
+                header.header
+                    .container
+                        .header__container
+                            .header__logo
+                                img(src="img/logo.svg", alt="")
+                            .header__nav
+                                nav.page-nav
+                                    a(href="" data-scrollto="scroll-1").page-nav__item Обо мне
+                                    a(href="" data-scrollto="scroll-2").page-nav__item Отзывы
+                                    a(href="" data-scrollto="scroll-3").page-nav__item Программа
+                                    a(href="" data-scrollto="scroll-4").page-nav__item Для кого
+                                    a(href="" data-scrollto="scroll-5").page-nav__item.intro-decor Ответы на вопросы
+                            .header__contacts
+                                .header-contacts
+                                    +svg-sprite('svg_sprite_phone_1', 'svg-sprite')
+                                    a(href="tel:0686619116").header-contacts__item +38 (068) 661 91 16
+                                    a(href="tel:0939564286").header-contacts__item +38 (093) 956 42 86
+                // ==========
+                // END HEADER
+                // ==========
+
+                .container
+                        .intro
+                            .intro__text
+                                .welcome
+                                    .welcome__subheader.wow.slideInLeft Трехдневный мастер-класс:
+                                    h1.welcome__header
+                                        |Как загрузить 10 000 <br>товаров на Rozetka <br>
+                                        span.header-accent за 72 часа
+                                    .welcome__comment
+                                        |и получать от 
+                                        span.count-accent 15 
+                                        |заказов в день
+                                    .welcome__act
+                                        .order-places
+                                            .order-places__button
+                                                button.button.button_a(data-modal="modal-1")
+                                                    span Занять место
+                                            .order-places__count Осталось 7 мест
+                            .intro__video
+                                .intro-video
+                                    .notebook
+                                        img(src="img/notebook.png", alt="")
+                                        .notebook__videoplace(style="background-image: url(img/notebook_screen_1.png)")
+                                            a(href="https://www.youtube.com/watch?v=nI1vh76lo4E&feature=youtu.be" data-fancybox).screen-play
+                                                +svg-sprite('svg_sprite_play', 'svg-sprite')
+            
+            // ========
+            // ПРОБЛЕМЫ
+            // ========
+            section.section
+                .container
+                    .section-problems
+                        .section-problems__image
+                            img(src="img/question.png", alt="")
+                        .section-problems__content
+                            .section-header <b>Торгуете на Rozetka?</b> <br>Тогда эти проблемы вам знакомы…
+                            ul.list-problems
+                                li.list-problems__item
+                                    .list-problems__icon
+                                        span
+                                            +svg-sprite('svg_sprite_clock', 'svg-sprite')
+                                    .list-problems__text Тратите кучу времени на загрузку товара, добавляя максимум по 10 единиц в час
+                                li.list-problems__item
+                                    .list-problems__icon
+                                        span
+                                            +svg-sprite('svg_sprite_cardboard_box', 'svg-sprite')
+                                    .list-problems__text При наличии нескольких поставщиков, непонятно где чей товар и как все это контролировать
+                                li.list-problems__item
+                                    .list-problems__icon
+                                        span
+                                            +svg-sprite('svg_sprite_denied', 'svg-sprite')
+                                    .list-problems__text Получаете баны за то, что товара не оказалось в наличии
+                                li.list-problems__item
+                                    .list-problems__icon
+                                        span
+                                            +svg-sprite('svg_sprite_calendar_2', 'svg-sprite')
+                                    .list-problems__text Товары висят на модерации 4-6 недель, а вы теряете деньги
+                                li.list-problems__item
+                                    .list-problems__icon
+                                        span
+                                            +svg-sprite('svg_sprite_shortlist', 'svg-sprite')
+                                    .list-problems__text Загружаете весь прайс поставщика вместо нужных позиций
+                                li.list-problems__item
+                                    .list-problems__icon
+                                        span
+                                            +svg-sprite('svg_sprite_discount', 'svg-sprite')
+                                    .list-problems__text Не знаете, где брать качественный товар по выгодным ценам
+                                li.list-problems__item
+                                    .list-problems__icon
+                                        span
+                                            +svg-sprite('svg_sprite_services', 'svg-sprite')
+                                    .list-problems__text При изменении цен или другой информации каждый товар приходится редактировать вручную
+                                li.list-problems__item
+                                    .list-problems__icon
+                                        span
+                                            +svg-sprite('svg_sprite_sales_performance', 'svg-sprite')
+                                    .list-problems__text Не можете участвовать в промоакциях и зарабатывать по-настоящему
+            // ============
+            // END ПРОБЛЕМЫ
+            // ============
+
+            // ==============================
+            // КАК Я ИЗБАВИЛСЯ ОТ ВСЕГО ЭТОГО
+            // ==============================
+            section#scroll-1.section
+                .container
+                    .section-presentation
+                        .section-presentation__text
+                            .section-header <b>Интересно</b>, как я избавился <br>от всего этого?
+                            .section-subheader Меня зовут Олег Футорной. Сейчас мои магазины насчитывают свыше 50 000 товаров. А на управление я трачу не больше 30 минут в день.
+                            p
+                                b Но так было не всегда. 2 года назад я зашивался!
+                            .section-presentation__list
+                                ul.list-check
+                                    li.list-check__item Подготовка товаров для загрузки  на Розетку занимала много времени
+                                    li.list-check__item Приходилось вручную редактировать каждую карточку товара.
+                                    li.list-check__item Не хватало ресурсов сайта для загрузки большого количества сразу
+                                    li.list-check__item Была проблема с контролем остатков и изменением цен
+                                    li.list-check__item При появлении нескольких поставщиков возникала путаница где чей товар и как все это контролировать
+                            p
+                                b
+                                    | Поэтому я сам создал приложение, которое позволяло бы легко управлять магазином - 
+                                    span.accent Marketplace Convert.
+                        .section-presentation__video
+                            .silver-bg
+                                img(src="img/silver-bg.png", alt="")
+                            .laptop
+                                img(src="img/laptop.png", alt="")
+                                .laptop__screen(style="background-image: url(img/screenshop-2020-06-26-11.59.43.png)")
+            // ==================================
+            // END КАК Я ИЗБАВИЛСЯ ОТ ВСЕГО ЭТОГО
+            // ==================================
+            
+            // ======
+            // ОТЗЫВЫ
+            // ======
+            section#scroll-2.section
+                .container
+                    .reviews__header.md-show
+                        .section-header Сейчас мое приложение <br>используют <b>более 1000 продавцов</b>
+                    .section-reviews
+                        .section-reviews__wrapper
+                            .section-reviews__device
+                                .notebook
+                                    img(src="img/notebook.png", alt="")
+                                    .notebook__videoplace
+                                        .swiper-container.reviews-slider-video#reviews-slider-video
+                                            .swiper-wrapper
+                                                .swiper-slide
+                                                    .reviews-slider-video__item(style="background-image: url(img/screenshot-91275.png)")
+                                                        a.screen-play(href="https://www.youtube.com/watch?v=-jMmvUV2AyE&feature=youtu.be" data-fancybox)
+                                                            +svg-sprite('svg_sprite_play', 'svg-sprite')
+                                                .swiper-slide
+                                                    .reviews-slider-video__item(style="background-image: url(img/screenshot-91275-2.png)")
+                                                        a.screen-play(href="https://www.youtube.com/watch?v=Igv4l3huomg&feature=youtu.be" data-fancybox)
+                                                            +svg-sprite('svg_sprite_play', 'svg-sprite')
+                                                .swiper-slide
+                                                    .reviews-slider-video__item(style="background-image: url(img/screenshot-91275-3.png)")
+                                                        a.screen-play(href="https://www.youtube.com/watch?v=nI1vh76lo4E&feature=youtu.be" data-fancybox)
+                                                            +svg-sprite('svg_sprite_play', 'svg-sprite')
+                                                .swiper-slide
+                                                    .reviews-slider-video__item(style="background-image: url(img/screenshot-91275-4.png)")
+                                                        a.screen-play(href="https://www.youtube.com/watch?v=h0BA_AB0cQw&feature=youtu.be" data-fancybox)
+                                                            +svg-sprite('svg_sprite_play', 'svg-sprite')
+                            .section-reviews__content
+                                .reviews
+                                    .reviews__header.md-hide
+                                        .section-header Сейчас мое приложение <br>используют <b>более 1000 продавцов</b>
+                                .reviews__content
+                                    .swiper-container#reviews-slider-text
+                                        .swiper-wrapper
+                                            .swiper-slide
+                                                .review
+                                                    .review__bline
+                                                    .review__left
+                                                    .review__quotes
+                                                        img(src="img/quotes-start.png", alt="")
+                                                        img(src="img/quotes-end.png", alt="")
+                                                    .review__text Хочу поделиться своими впечатлениями по поводу программы Marketplace Convert:
+                                                    .review__author Лучше я не знаю
+                                            .swiper-slide
+                                                .review
+                                                    .review__bline
+                                                    .review__left
+                                                    .review__quotes
+                                                        img(src="img/quotes-start.png", alt="")
+                                                        img(src="img/quotes-end.png", alt="")
+                                                    .review__text Очень хочу поделиться своими впечатлениями по поводу программы Marketplace Convert.
+                                                    .review__author Лучше я не знаю 2
+                                            .swiper-slide
+                                                .review
+                                                    .review__bline
+                                                    .review__left
+                                                    .review__quotes
+                                                        img(src="img/quotes-start.png", alt="")
+                                                        img(src="img/quotes-end.png", alt="")
+                                                    .review__text Хочу очень поделиться своими впечатлениями по поводу программы Marketplace Convert:
+                                                    .review__author Лучше я не знаю 3
+                                            .swiper-slide
+                                                .review
+                                                    .review__bline
+                                                    .review__left
+                                                    .review__quotes
+                                                        img(src="img/quotes-start.png", alt="")
+                                                        img(src="img/quotes-end.png", alt="")
+                                                    .review__text Хотел бы поделиться своими впечатлениями по поводу программы Marketplace Convert:
+                                                    .review__author Лучше я не знаю 4
+                                .reviews__nav
+                                    .slider-nav
+                                        .slider-nav__pp#reviews-slider-prev
+                                            +svg-sprite('svg_sprite_prev', 'svg-sprite')
+                                        .slider-nav__pag#reviews-slider-pagination
+                                        .slider-nav__pp.slider-nav__pp_next#reviews-slider-next
+                                            +svg-sprite('svg_sprite_prev', 'svg-sprite')
+                        .section-reviews__act
+                            button.button.button_a(data-modal="modal-1")
+                                span Пройти обучение
+            // ==========
+            // END ОТЗЫВЫ
+            // ==========
+
+            // ===============================
+            // ХОТИТЕ УЗНАТЬ КАК ВСЕ РАБОТАЕТ?
+            // ===============================
+            section#scroll-3.section
+                .container
+                    .section-header.md-show Хотите узнать как все работает? <br> <b>Регистрируйтесь на мастер-класс!</b>
+                    .section-overview
+                        .section-overview__content
+                            .reviews__header
+                                .section-header.md-hide Хотите узнать как все работает? <br> <b>Регистрируйтесь на мастер-класс!</b>
+                                .section-overview__list
+                                    .collapses
+                                        .collapses__item
+                                            .collapse(data-modal="modal-2", data-timetable="0")
+                                                .collapse__header 1 день
+                                                .collapse__content
+                                                    .stage-text Правильная структура XML файла с каталогом товаров
+                                                button.collapse__toggle
+                                                    +svg-sprite('svg_sprite_open_close', 'svg-sprite')
+                                        .collapses__item
+                                            .collapse(data-modal="modal-2", data-timetable="1")
+                                                .collapse__header 2 день
+                                                .collapse__content
+                                                    .stage-text Подготовка XML файла
+                                                button.collapse__toggle
+                                                    +svg-sprite('svg_sprite_open_close', 'svg-sprite')
+                                        .collapses__item
+                                            .collapse(data-modal="modal-2", data-timetable="2")
+                                                .collapse__header 3 день
+                                                .collapse__content
+                                                    .stage-text Массовое изменение и контроль цены товаров
+                                                button.collapse__toggle
+                                                    +svg-sprite('svg_sprite_open_close', 'svg-sprite')
+                                        .collapses__item
+                                            .collapse(data-modal="modal-2", data-timetable="3")
+                                                .collapse__header Бонус
+                                                .collapse__content
+                                                    .stage-text Видео курс, контакты поставщиков
+                                                button.collapse__toggle
+                                                    +svg-sprite('svg_sprite_open_close', 'svg-sprite')
+                        .section-overview__video
+                            .silver-bg
+                                img(src="img/silver-bg.png", alt="")
+                            .laptop
+                                img(src="img/laptop.png", alt="")
+                                .laptop__screen(style="background-image: url(img/notebook_screen_2.png)")
+                                    .screen-play
+                                        +svg-sprite('svg_sprite_play', 'svg-sprite')
+                                .device-about Видеообзор программы
+            // ===================================
+            // END ХОТИТЕ УЗНАТЬ КАК ВСЕ РАБОТАЕТ?
+            // ===================================
+
+            // ========================
+            // ЗАРЕГИСТРИРУЙТЕСЬ СЕЙЧАС
+            // ========================
+            section#scroll-4.section
+                .container
+                    .promo-wrapper
+                        .promo-surprise
+                            .promo-surprise__content
+                                .promo-surprise__left
+                                    .promo-surprise__header Зарегистрируйтесь сейчас <br> <b>и получите подарок</b>
+                                    .promo-surprise__price
+                                        .price-old 599
+                                        .price
+                                            span 299
+                                            span грн
+                                .promo-surprise__img
+                                    img(src="img/surprise.png", alt="")
+                                .promo-surprise__right
+                                    button.button.button_a(data-modal="modal-1")
+                                        span Зарегистрироваться
+                            .promo-surprise__mark Только 3 дня
+            // ============================
+            // END ЗАРЕГИСТРИРУЙТЕСЬ СЕЙЧАС
+            // ============================
+
+            // =================
+            // ОТВЕТЫ НА ВОПРОСЫ
+            // =================
+            section#scroll-5.section
+                .container
+                    .section-answers
+                        .section-answers__image
+                            .silver-bg
+                                img(src="img/silver-bg-left.png", alt="")
+                            img(src="img/bnr.png", alt="")
+                        .section-answers__text
+                            .section-header Именно на мастер-классе продавцы Rozetka получают ответы <b>на 4 главных вопроса</b>
+                            .answers
+                                .answers__item
+                                    .answers__icon
+                                        img(src="img/check.png", alt="")
+                                    .answers__text Как быстро загружать товары и проходить модерацию за 14 дней
+                                .answers__item
+                                    .answers__icon
+                                        img(src="img/list.png", alt="")
+                                    .answers__text Как работать с любым количеством поставщиков без путаницы в товарах
+                                .answers__item
+                                    .answers__icon
+                                        img(src="img/databese_backup.png", alt="")
+                                    .answers__text Как контролировать наличие товаров и обновление ассортимента
+                                .answers__item
+                                    .answers__icon
+                                        img(src="img/price_tag.png", alt="")
+                                    .answers__text Как участвовать в акциях и промо рассылках от Rozetka
+            // =================
+            // ОТВЕТЫ НА ВОПРОСЫ
+            // =================
+
+            // ============================
+            // КОМУ НЕОБХОДИМ МАСТЕР-КЛАСС?
+            // ============================
+            section.section
+                .container
+                    .section-header Кому необходим <b>мастер-класс?</b>
+                    .section-audience
+                        .section-audience__item
+                            .audience
+                                .audience__wrapper
+                                    .audience__header
+                                        img(src="img/audience-1.png", alt="")
+                                    .audience__content
+                                        .audience__for После мастер-класса вы начнете развивать свой магазин с новой скоростью:
+                                        .audience__list
+                                            ul.list-check
+                                                li.list-check__item Загружать по 10 000 товаров за 72 часа контролировать остатки товаров одновременно у многих поставщиков
+                                                li.list-check__item Проходить модерацию за 14 дней благодаря правильной структуре XML файла
+                                                li.list-check__item Контролировать цены на товары и массово их изменять
+                                                li.list-check__item Узнаете, как параметры и характеристики товаров влияют на продвижение
+                                        .audience__act
+                                            button.button.button_a(data-modal="modal-1")
+                                                span Принять участие
+                        .section-audience__item
+                            .audience
+                                .audience__wrapper
+                                    .audience__header
+                                        img(src="img/audience-2.png", alt="")
+                                    .audience__content
+                                        .audience__for После мастер-класса вы начнете развивать свой магазин с новой скоростью:
+                                        .audience__list
+                                            ul.list-check
+                                                li.list-check__item Загружать по 10 000 товаров за 72 часа контролировать остатки товаров одновременно у многих поставщиков
+                                                li.list-check__item Проходить модерацию за 14 дней благодаря правильной структуре XML файла
+                                                li.list-check__item Контролировать цены на товары и массово их изменять
+                                                li.list-check__item Узнаете, как параметры и характеристики товаров влияют на продвижение
+                                        .audience__act
+                                            button.button.button_a(data-modal="modal-1")
+                                                span Принять участие
+            // ================================
+            // END КОМУ НЕОБХОДИМ МАСТЕР-КЛАСС?
+            // ================================
+
+            // ==================
+            // ОТЗЫВЫ-КОММЕНТАРИИ
+            // ==================
+            section.section
+                .swiper-container.comments-slider#slider-comments
+                    .swiper-wrapper
+                        .swiper-slide
+                            a(href="img/comments/1.png" data-fancybox="comments").comment-user
+                                img(src="img/comments/1.png", alt="")
+                            a(href="img/comments/2.png" data-fancybox="comments").comment-user
+                                img(src="img/comments/2.png", alt="")
+                        .swiper-slide
+                            a(href="img/comments/3.png" data-fancybox="comments").comment-user
+                                img(src="img/comments/3.png", alt="")
+                            a(href="img/comments/4.png" data-fancybox="comments").comment-user
+                                img(src="img/comments/4.png", alt="")
+                        .swiper-slide
+                            a(href="img/comments/5.png" data-fancybox="comments").comment-user
+                                img(src="img/comments/5.png", alt="")
+                            a(href="img/comments/6.png" data-fancybox="comments").comment-user
+                                img(src="img/comments/6.png", alt="")
+                        .swiper-slide
+                            a(href="img/comments/7.png" data-fancybox="comments").comment-user
+                                img(src="img/comments/7.png", alt="")
+                            a(href="img/comments/8.png" data-fancybox="comments").comment-user
+                                img(src="img/comments/8.png", alt="")
+                        .swiper-slide
+                            a(href="img/comments/1.png" data-fancybox="comments").comment-user
+                                img(src="img/comments/1.png", alt="")
+                            a(href="img/comments/2.png" data-fancybox="comments").comment-user
+                                img(src="img/comments/2.png", alt="")
+                        .swiper-slide
+                            a(href="img/comments/3.png" data-fancybox="comments").comment-user
+                                img(src="img/comments/3.png", alt="")
+                            a(href="img/comments/4.png" data-fancybox="comments").comment-user
+                                img(src="img/comments/4.png", alt="")
+                        .swiper-slide
+                            a(href="img/comments/5.png" data-fancybox="comments").comment-user
+                                img(src="img/comments/5.png", alt="")
+                            a(href="img/comments/6.png" data-fancybox="comments").comment-user
+                                img(src="img/comments/6.png", alt="")
+                        .swiper-slide
+                            a(href="img/comments/7.png" data-fancybox="comments").comment-user
+                                img(src="img/comments/7.png", alt="")
+                            a(href="img/comments/8.png" data-fancybox="comments").comment-user
+                                img(src="img/comments/8.png", alt="")
+            // ======================
+            // END ОТЗЫВЫ-КОММЕНТАРИИ
+            // ======================
+
+            // ==============================
+            // ОТВЕТЫ НА САМЫЕ ЧАСТЫЕ ВОПРОСЫ
+            // ==============================
+            section.section
+                .container
+                    .section-header Ответы на <b>самые частые вопросы</b>
+                    .section-faq
+                        .collapses
+                            .collapses__item
+                                .collapse(data-iscollaps)
+                                    .collapse__header Вопрос
+                                    .collapse__content Редакция предоставляет абсолютно любому человеку (паспорт с регистрацией предъявлять не обязательно) право спросить нас — нужно отправить ваш вопрос с этой страницы — о том, что его волнует в настоящую минуту.
+                                    button.collapse__toggle
+                                        +svg-sprite('svg_sprite_open_close', 'svg-sprite')
+                                .collapse-drop
+                                    p Редакция просит не задавать вопросов на темы, про которые никогда не пишет журнал «Вокруг света» (политика, например, или гламур, или светская жизнь).
+                                    p Редакция готова честно указывать, почему из всех появившихся на сайте вопросов она выбрала для публикации именно те, которые фигурируют ниже.
+                            .collapses__item
+                                .collapse(data-iscollaps)
+                                    .collapse__header Вопрос
+                                    .collapse__content Редакция предоставляет абсолютно любому человеку (паспорт с регистрацией предъявлять не обязательно) право спросить нас — нужно отправить ваш вопрос с этой страницы — о том, что его волнует в настоящую минуту.
+                                    button.collapse__toggle
+                                        +svg-sprite('svg_sprite_open_close', 'svg-sprite')
+                                .collapse-drop
+                                    p Редакция просит не задавать вопросов на темы, про которые никогда не пишет журнал «Вокруг света» (политика, например, или гламур, или светская жизнь).
+                                    p Редакция готова честно указывать, почему из всех появившихся на сайте вопросов она выбрала для публикации именно те, которые фигурируют ниже.
+                            .collapses__item
+                                .collapse(data-iscollaps)
+                                    .collapse__header Вопрос
+                                    .collapse__content Редакция предоставляет абсолютно любому человеку (паспорт с регистрацией предъявлять не обязательно) право спросить нас — нужно отправить ваш вопрос с этой страницы — о том, что его волнует в настоящую минуту.
+                                    button.collapse__toggle
+                                        +svg-sprite('svg_sprite_open_close', 'svg-sprite')
+                                .collapse-drop
+                                    p Редакция просит не задавать вопросов на темы, про которые никогда не пишет журнал «Вокруг света» (политика, например, или гламур, или светская жизнь).
+                                    p Редакция готова честно указывать, почему из всех появившихся на сайте вопросов она выбрала для публикации именно те, которые фигурируют ниже.
+                            .collapses__item
+                                .collapse(data-iscollaps)
+                                    .collapse__header Вопрос
+                                    .collapse__content Редакция предоставляет абсолютно любому человеку (паспорт с регистрацией предъявлять не обязательно) право спросить нас — нужно отправить ваш вопрос с этой страницы — о том, что его волнует в настоящую минуту.
+                                    button.collapse__toggle
+                                        +svg-sprite('svg_sprite_open_close', 'svg-sprite')
+                                .collapse-drop
+                                    p Редакция просит не задавать вопросов на темы, про которые никогда не пишет журнал «Вокруг света» (политика, например, или гламур, или светская жизнь).
+                                    p Редакция готова честно указывать, почему из всех появившихся на сайте вопросов она выбрала для публикации именно те, которые фигурируют ниже.
+                            .collapses__item
+                                .collapse(data-iscollaps)
+                                    .collapse__header Вопрос
+                                    .collapse__content Редакция предоставляет абсолютно любому человеку (паспорт с регистрацией предъявлять не обязательно) право спросить нас — нужно отправить ваш вопрос с этой страницы — о том, что его волнует в настоящую минуту.
+                                    button.collapse__toggle
+                                        +svg-sprite('svg_sprite_open_close', 'svg-sprite')
+                                .collapse-drop
+                                    p Редакция просит не задавать вопросов на темы, про которые никогда не пишет журнал «Вокруг света» (политика, например, или гламур, или светская жизнь).
+                                    p Редакция готова честно указывать, почему из всех появившихся на сайте вопросов она выбрала для публикации именно те, которые фигурируют ниже.
+            // ==================================
+            // END ОТВЕТЫ НА САМЫЕ ЧАСТЫЕ ВОПРОСЫ
+            // ==================================
+
+            // ======
+            // FOOTER
+            // ======
+            footer.footer
+                // =============================
+                // ВЫ МОЖЕТЕ ЗАРАБАТЫВАТЬ БОЛЬШЕ
+                // =============================
+                .container
+                    .promo-wrapper.promo-motiv-wrapper
+                        .promo-motiv
+                            .promo-motiv__content
+                                .promo-motiv__text
+                                    .promo-motiv__header <b>Вы можете зарабатывать больше.</b> <br>Просто никто вас не научил <br>как это делать!
+                                    .promo-motiv__subheader Занимайте свое место  и начинайте пользоваться самой простой и эффективной системой наполнения магазина на Розетке!
+                                .promo-motiv__act
+                                    .promo-motiv__price
+                                        .price-old 599
+                                        .price
+                                            span 299
+                                            span грн
+                                    .promo-motiv__comment согласитесь - копейки, когда на кону десятки тысяч и будущее вашего бизнеса…
+                                    .promo-motiv__button
+                                        button.button.button_a(data-modal="modal-1")
+                                            span Занять место
+                // =================================
+                // END ВЫ МОЖЕТЕ ЗАРАБАТЫВАТЬ БОЛЬШЕ
+                // =================================
+                .container
+                    .footer__content
+                        .footer__logo
+                            img(src="img/logo-2.svg", alt="")
+                            span.md-hide ©2020 Marketplace Convert
+                        .footer__legal
+                            .footer__person
+                                span ФЛП Антонов П.В.
+                                span ИНН 3221420313
+                            .footer__logos
+                                img(src="img/fondy_logo.png", alt="")
+                                img(src="img/vbv.png", alt="")
+                                img(src="img/mcsc.png", alt="")
+                        .footer__links
+                            a(href="") Гарантия возврата
+                            br
+                            a(href="") Согласие с рассылкой
+                            br
+                            a(href="") Договор публичной оферты
+                            br
+                            a(href="") Партнерская программа
+                            br
+                            a(href="") Политика конфиденциальности
+                        .footer__conn
+                            .footer__contacts
+                                a(href="tel:0686619116")
+                                    +svg-sprite('svg_sprite_phone_2', 'svg-sprite')
+                                    span +38 (068) 661 91 16
+                                br
+                                a(href="tel:0939564286")
+                                    +svg-sprite('svg_sprite_phone_2', 'svg-sprite')
+                                    span +38 (093) 956 42 86
+                                br
+                                a(href="mailto:info@xmlreactor.shop")
+                                    +svg-sprite('svg_sprite_mail', 'svg-sprite')
+                                    span info@xmlreactor.shop
+                            .footer__social
+                                a(href="")
+                                    +svg-sprite('svg_sprite_facebook', 'svg-sprite')
+                                a(href="")
+                                    +svg-sprite('svg_sprite_youtube', 'svg-sprite')
+                                a(href="")
+                                    +svg-sprite('svg_sprite_telegram', 'svg-sprite')
+            // ==========
+            // END FOOTER
+            // ==========
+
+        script(src="js/main.js")

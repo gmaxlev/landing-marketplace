@@ -1,0 +1,14 @@
+.intro-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  @include media-breakpoint-down(lg) {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  @include media-breakpoint-down(md) {
+    position: relative;
+    transform: none;
+    display: inline-flex;
+  }
+}

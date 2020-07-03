@@ -1,0 +1,35 @@
+.dayabout {
+  border: 5px solid $color-b;
+  padding: 20px;
+  position: relative;
+  @include media-breakpoint-down(xs) {
+    border: 0;
+    padding: 0;
+  }
+}
+.dayabout__name {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: $color-b;
+  position: absolute;
+  background-color: white;
+  top: -12px;
+  left: -5px;
+  padding: 0 17px 10px 0;
+  @include media-breakpoint-down(xs) {
+    display: none;
+  }
+}
+.dayabout__content {
+  background-color: #f5f4f4;
+  padding: 38px;
+  @include media-breakpoint-down(xs) {
+    padding: 20px;
+  }
+}
+.dayabout__header {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}

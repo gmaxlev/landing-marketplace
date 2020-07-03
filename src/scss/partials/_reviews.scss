@@ -1,0 +1,16 @@
+.reviews {
+}
+.reviews__nav {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 50px;
+  @include media-breakpoint-down(md) {
+    justify-content: center;
+  }
+}
+
+.reviews__content {
+  .swiper-container {
+    overflow: visible;
+  }
+}

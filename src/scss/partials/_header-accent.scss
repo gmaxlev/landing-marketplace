@@ -1,0 +1,13 @@
+.header-accent {
+  position: relative;
+  &::before {
+    content: "";
+    background-color: $color-b;
+    position: absolute;
+    bottom: 6px;
+    right: 0;
+    left: 0;
+    height: 5px;
+    z-index: -1;
+  }
+}

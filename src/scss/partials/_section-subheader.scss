@@ -1,0 +1,9 @@
+.section-subheader {
+  font-weight: 200;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  margin-bottom: 50px;
+  @include media-breakpoint-down(xs) {
+    margin-bottom: 30px;
+  }
+}

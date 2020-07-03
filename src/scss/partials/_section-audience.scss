@@ -1,0 +1,22 @@
+.section-audience {
+  display: flex;
+  @include media-breakpoint-down(sm) {
+    flex-direction: column;
+  }
+}
+
+.section-audience__item {
+  width: 50%;
+  margin-right: 30px;
+  @include media-breakpoint-down(sm) {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 50px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &:last-child {
+    margin-right: 0;
+  }
+}

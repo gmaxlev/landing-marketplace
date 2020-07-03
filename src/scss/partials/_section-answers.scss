@@ -1,0 +1,37 @@
+.section-answers {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.section-answers__text {
+  width: 57.4%;
+  padding-left: 73px;
+  box-sizing: border-box;
+  @include media-breakpoint-down(md) {
+    padding-left: 0;
+    width: 100%;
+  }
+}
+.section-answers__image {
+  user-select: none;
+  position: relative;
+  @include media-breakpoint-down(md) {
+    display: none;
+  }
+  .silver-bg {
+    position: absolute;
+    top: -30px;
+    bottom: 0;
+    width: 873px;
+    right: -20px;
+    z-index: -1;
+  }
+  img {
+    max-width: 100%;
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    user-drag: none;
+  }
+}

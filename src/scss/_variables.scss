@@ -7,13 +7,17 @@ $grid-breakpoints: (
   sm: 576px,
   md: 768px,
   lg: 992px,
-  xl: 1200px
+  xl: 1200px,
+  xxl: 1700px
 ) !default;
 
 /**
   Часто используемые цвета
 */
+$color-a: #25335b;
+$color-b: #38c69a;
 
 /* 
   Шрифты
 */
+$font-a: "Avenir Next Cyr", sans-serif;

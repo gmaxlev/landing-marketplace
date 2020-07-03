@@ -1,0 +1,32 @@
+.open-mobile-menu {
+  cursor: pointer;
+  background-color: transparent;
+  border-radius: 0;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  outline: none;
+  .svg-sprite_close {
+    display: none;
+  }
+  &:hover {
+    .svg-sprite {
+      fill: $color-b;
+    }
+  }
+  .svg-sprite {
+    width: 30px;
+    height: 30px;
+    fill: $color-a;
+    transition: fill 0.3s;
+  }
+}
+
+.open-mobile-menu_open {
+  .svg-sprite_close {
+    display: block;
+  }
+  .svg-sprite_open {
+    display: none;
+  }
+}

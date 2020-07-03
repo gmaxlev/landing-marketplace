@@ -1,0 +1,5 @@
+.silver-bg {
+  @include media-breakpoint-down(md) {
+    display: none;
+  }
+}

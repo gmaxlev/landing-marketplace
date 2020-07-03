@@ -1,0 +1,22 @@
+@keyframes input-error-show {
+  from {
+    opacity: 0;
+    transform: translateX(-10px) translateY(-50%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0) translateY(-50%);
+  }
+}
+
+.input-error {
+  position: absolute;
+  transform: translateY(-50%);
+  background-color: #fff;
+  left: 15px;
+  padding: 0 15px;
+  color: red;
+  font-weight: 600;
+  animation: input-error-show 1s;
+}

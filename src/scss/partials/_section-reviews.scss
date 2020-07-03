@@ -1,0 +1,36 @@
+.section-reviews__wrapper {
+  display: flex;
+  @include media-breakpoint-down(md) {
+    flex-direction: column;
+  }
+}
+.section-reviews__device {
+  width: 48%;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 30px;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 5;
+  @include media-breakpoint-down(xl) {
+    align-items: center;
+
+    padding-top: 50px;
+  }
+  @include media-breakpoint-down(md) {
+    width: 100%;
+    padding: 0;
+    justify-content: center;
+  }
+}
+.section-reviews__content {
+  width: 52%;
+  box-sizing: border-box;
+  @include media-breakpoint-down(md) {
+    width: 100%;
+  }
+}
+.section-reviews__act {
+  text-align: center;
+  margin-top: 50px;
+}

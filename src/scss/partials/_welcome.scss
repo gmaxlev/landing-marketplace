@@ -1,0 +1,39 @@
+.welcome {
+  @include media-breakpoint-down(md) {
+    text-align: center;
+  }
+}
+.welcome__subheader {
+  text-transform: uppercase;
+  font-weight: 800;
+  color: $color-b;
+  @include media-breakpoint-down(xs) {
+    font-size: 0.9rem;
+  }
+}
+.welcome__header {
+  text-transform: uppercase;
+  font-size: 2.25rem;
+  line-height: 2.875rem;
+  margin: 44px 0;
+  @include media-breakpoint-down(xs) {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin: 20px;
+  }
+}
+.welcome__comment {
+  font-weight: 600;
+  font-size: 1.875rem;
+  line-height: 2.0625rem;
+  @include media-breakpoint-down(xs) {
+    font-size: 1.3rem;
+    line-height: 1.2;
+  }
+}
+.welcome__act {
+  margin-top: 100px;
+  @include media-breakpoint-down(xs) {
+    margin-top: 40px;
+  }
+}

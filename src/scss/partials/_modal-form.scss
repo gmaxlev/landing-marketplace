@@ -1,0 +1,45 @@
+.modal-form {
+  padding: 60px 70px;
+  @include media-breakpoint-down(xs) {
+    padding: 50px 20px 20px;
+  }
+}
+
+.modal-form__header {
+  font-size: 2.25rem;
+  line-height: 2.25rem;
+  font-weight: 600;
+  @include media-breakpoint-down(xs) {
+    font-size: 1.8rem;
+    line-height: 1.5rem;
+  }
+}
+
+.modal-form__subheader {
+  font-size: 1.125rem;
+  line-height: 2.25rem;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  @include media-breakpoint-down(xs) {
+    font-size: 1.125rem;
+    line-height: 1.6rem;
+  }
+}
+.modal-form__input {
+  margin-bottom: 15px;
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+.modal-form__act {
+  margin-top: 30px;
+  .button {
+    padding-left: 10px;
+    padding-right: 10px;
+    max-width: 278px;
+    width: 100%;
+  }
+  .order-places__button {
+    width: 100%;
+  }
+}

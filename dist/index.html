@@ -7,7 +7,14 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Title</title>
     <link rel="stylesheet" href="css/main.css" />
-    <script src="vendor/jquery.min.js"></script><!-- =====================-->
+    <link rel="stylesheet" href="vendor/swiper/swiper.min.css" />
+    <link rel="stylesheet" href="vendor/fancybox/jquery.fancybox.min.css" />
+    <link rel="stylesheet" href="vendor/animate.min.css" />
+    <script src="vendor/jquery.min.js"></script>
+    <script src="vendor/swiper/swiper.min.js"></script>
+    <script src="vendor/jquery.validate.min.js"></script>
+    <script src="vendor/fancybox/jquery.fancybox.min.js"></script>
+    <script src="vendor/wow.min.js"></script><!-- =====================-->
     <!-- ЗАГРУЗКА SVG СПРАЙТОВ-->
     <!-- =====================-->
     <script>
@@ -30,8 +37,796 @@
 
 <body>
     <div class="wrapper">
-        <div class="container"></div>
+        <!-- ====================-->
+        <!-- МОДАЛЬНОЕ ОКНО ФОРМА-->
+        <!-- ====================-->
+        <div class="modal" id="modal-1">
+            <div class="modal__window">
+                <div class="modal__content">
+                    <div class="modal-window">
+                        <div class="modal-form">
+                            <div class="modal-form__header">Заполните форму</div>
+                            <div class="modal-form__subheader">Мы свяжемся с Вами в ближайшее время</div>
+                            <form class="modal-form__form form-modal-1" name="Форма №1">
+                                <div class="modal-form__input">
+                                    <div class="input-text"><input type="text" name="name" placeholder="Ваше имя" /></div>
+                                </div>
+                                <div class="modal-form__input">
+                                    <div class="input-text"><input type="text" name="phone" placeholder="Ваш номер телефона" /></div>
+                                </div>
+                                <div class="modal-form__input">
+                                    <div class="input-text"><input type="text" name="email" placeholder="Ваш e-mail" /></div>
+                                </div>
+                                <div class="modal-form__act">
+                                    <div class="order-places">
+                                        <div class="order-places__button"><button class="button button_a"><span>Зарегистрироваться</span></button></div>
+                                        <div class="order-places__count">7 мест</div>
+                                    </div>
+                                </div>
+                            </form>
+                            <div class="form-send-error">Ошибка. Не удалось отправить форму.</div>
+                            <div class="form-send-success">Спасибо!<br> Ожидайте звонок.</div>
+                        </div>
+                    </div>
+                    <div class="modal-window__close"></div>
+                </div>
+            </div>
+        </div><!-- ========================-->
+        <!-- END МОДАЛЬНОЕ ОКНО ФОРМА-->
+        <!-- ========================-->
+        <!-- =========================-->
+        <!-- МОДАЛЬНОЕ ОКНО РАСПИСАНИЕ-->
+        <!-- =========================-->
+        <div class="modal" id="modal-2">
+            <div class="modal__window">
+                <div class="modal__content">
+                    <div class="modal-window">
+                        <div class="modal-timetable">
+                            <div class="modal-timetable__nav"><span class="modal-timetable__active">1 день</span><span>2 день</span><span>3 день</span><span>Бонус</span></div>
+                            <div class="modal-timetable__about">
+                                <div class="modal-timetable__item">
+                                    <div class="dayabout">
+                                        <div class="dayabout__name">1 день</div>
+                                        <div class="dayabout__content">
+                                            <div class="dayabout__header">Правильная структура XML файла с каталогом товаров</div>
+                                            <div class="dayabout__list">
+                                                <ol class="number-list">
+                                                    <li class="number-list__item">
+                                                        <div class="number-list__number">1</div>Как ускорить выгрузку товаров, выбрав правильную систему наполнения магазина на Розетке
+                                                    </li>
+                                                    <li class="number-list__item">
+                                                        <div class="number-list__number">2</div>Что такое идеальная структура XML файла
+                                                    </li>
+                                                    <li class="number-list__item">
+                                                        <div class="number-list__number">3</div>Обязательные и дополнительные параметры XML
+                                                    </li>
+                                                    <li class="number-list__item">
+                                                        <div class="number-list__number">4</div>Создание идеальной структуры XML файла
+                                                    </li>
+                                                    <li class="number-list__item">
+                                                        <div class="number-list__number">5</div>Соответствие категорий поставшика с категориями Розетки
+                                                    </li>
+                                                    <li class="number-list__item">
+                                                        <div class="number-list__number">6</div>Как все сделать за 5 минут с помощью MarketPlaceConvert
+                                                    </li>
+                                                </ol>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-timetable__item">
+                                    <div class="dayabout">
+                                        <div class="dayabout__name">2 день</div>
+                                        <div class="dayabout__content">
+                                            <div class="dayabout__header">Правильная структура XML файла с каталогом товаров</div>
+                                            <div class="dayabout__list">
+                                                <ol class="number-list">
+                                                    <li class="number-list__item">
+                                                        <div class="number-list__number">1</div>Как ускорить выгрузку товаров, выбрав правильную систему наполнения магазина на Розетке
+                                                    </li>
+                                                    <li class="number-list__item">
+                                                        <div class="number-list__number">2</div>Что такое идеальная структура XML файла
+                                                    </li>
+                                                    <li class="number-list__item">
+                                                        <div class="number-list__number">3</div>Обязательные и дополнительные параметры XML
+                                                    </li>
+                                                    <li class="number-list__item">
+                                                        <div class="number-list__number">4</div>Создание идеальной структуры XML файла
+                                                    </li>
+                                                    <li class="number-list__item">
+                                                        <div class="number-list__number">5</div>Соответствие категорий поставшика с категориями Розетки
+                                                    </li>
+                                                    <li class="number-list__item">
+                                                        <div class="number-list__number">6</div>Как все сделать за 5 минут с помощью MarketPlaceConvert
+                                                    </li>
+                                                </ol>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-timetable__item">
+                                    <div class="dayabout">
+                                        <div class="dayabout__name">3 день</div>
+                                        <div class="dayabout__content">
+                                            <div class="dayabout__header">Правильная структура XML файла с каталогом товаров</div>
+                                            <div class="dayabout__list">
+                                                <ol class="number-list">
+                                                    <li class="number-list__item">
+                                                        <div class="number-list__number">1</div>Как ускорить выгрузку товаров, выбрав правильную систему наполнения магазина на Розетке
+                                                    </li>
+                                                    <li class="number-list__item">
+                                                        <div class="number-list__number">2</div>Что такое идеальная структура XML файла
+                                                    </li>
+                                                    <li class="number-list__item">
+                                                        <div class="number-list__number">3</div>Обязательные и дополнительные параметры XML
+                                                    </li>
+                                                    <li class="number-list__item">
+                                                        <div class="number-list__number">4</div>Создание идеальной структуры XML файла
+                                                    </li>
+                                                    <li class="number-list__item">
+                                                        <div class="number-list__number">5</div>Соответствие категорий поставшика с категориями Розетки
+                                                    </li>
+                                                    <li class="number-list__item">
+                                                        <div class="number-list__number">6</div>Как все сделать за 5 минут с помощью MarketPlaceConvert
+                                                    </li>
+                                                </ol>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-timetable__item">
+                                    <div class="dayabout">
+                                        <div class="dayabout__name">Бонус</div>
+                                        <div class="dayabout__content">
+                                            <div class="dayabout__header">Правильная структура XML файла с каталогом товаров</div>
+                                            <div class="dayabout__list">
+                                                <ol class="number-list">
+                                                    <li class="number-list__item">
+                                                        <div class="number-list__number">1</div>Как ускорить выгрузку товаров, выбрав правильную систему наполнения магазина на Розетке
+                                                    </li>
+                                                    <li class="number-list__item">
+                                                        <div class="number-list__number">2</div>Что такое идеальная структура XML файла
+                                                    </li>
+                                                    <li class="number-list__item">
+                                                        <div class="number-list__number">3</div>Обязательные и дополнительные параметры XML
+                                                    </li>
+                                                    <li class="number-list__item">
+                                                        <div class="number-list__number">4</div>Создание идеальной структуры XML файла
+                                                    </li>
+                                                    <li class="number-list__item">
+                                                        <div class="number-list__number">5</div>Соответствие категорий поставшика с категориями Розетки
+                                                    </li>
+                                                    <li class="number-list__item">
+                                                        <div class="number-list__number">6</div>Как все сделать за 5 минут с помощью MarketPlaceConvert
+                                                    </li>
+                                                </ol>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-window__close"></div>
+                </div>
+            </div>
+        </div><!-- =============================-->
+        <!-- END МОДАЛЬНОЕ ОКНО РАСПИСАНИЕ-->
+        <!-- =============================-->
+        <!-- =============-->
+        <!-- MOBILE HEADER-->
+        <!-- =============-->
+        <div class="mobheader">
+            <div class="container mobheader__container">
+                <div class="mobheader__logo"><img src="img/logo.svg" alt="" /></div>
+                <div class="mobheader__contacts"><a href="tel:0686619116">+38 (068) 661 91 16</a><a href="tel:0939564286">+38 (093) 956 42 86</a></div>
+                <div class="mobheader__menu"><button class="open-mobile-menu"><svg class="svg-sprite svg-sprite_open">
+                            <use xlink:href="#svg_sprite_hamburger"></use>
+                        </svg><svg class="svg-sprite svg-sprite_close">
+                            <use xlink:href="#svg_sprite_close"></use>
+                        </svg></button></div>
+            </div>
+        </div><!-- =================-->
+        <!-- END MOBILE HEADER-->
+        <!-- =================-->
+        <!-- ===========-->
+        <!-- MOBILE MENU-->
+        <!-- ===========-->
+        <ul class="mobmenu">
+            <li class="mobmenu__item"><a href="" data-scrollto="scroll-1">Обо мне</a></li>
+            <li class="mobmenu__item"><a href="" data-scrollto="scroll-2">Отзывы</a></li>
+            <li class="mobmenu__item"><a href="" data-scrollto="scroll-3">Программа</a></li>
+            <li class="mobmenu__item"><a href="" data-scrollto="scroll-4">Для кого</a></li>
+            <li class="mobmenu__item"><a href="" data-scrollto="scroll-5">Ответы на вопросы</a></li>
+        </ul><!-- ===============-->
+        <!-- END MOBILE MENU-->
+        <!-- ===============-->
+        <div class="first-screen">
+            <!-- ======-->
+            <!-- HEADER-->
+            <!-- ======-->
+            <header class="header">
+                <div class="container">
+                    <div class="header__container">
+                        <div class="header__logo"><img src="img/logo.svg" alt="" /></div>
+                        <div class="header__nav">
+                            <nav class="page-nav"><a class="page-nav__item" href="" data-scrollto="scroll-1">Обо мне</a><a class="page-nav__item" href="" data-scrollto="scroll-2">Отзывы</a><a class="page-nav__item" href="" data-scrollto="scroll-3">Программа</a><a class="page-nav__item" href="" data-scrollto="scroll-4">Для кого</a><a class="page-nav__item intro-decor" href="" data-scrollto="scroll-5">Ответы на вопросы</a></nav>
+                        </div>
+                        <div class="header__contacts">
+                            <div class="header-contacts"><svg class="svg-sprite">
+                                    <use xlink:href="#svg_sprite_phone_1"></use>
+                                </svg><a class="header-contacts__item" href="tel:0686619116">+38 (068) 661 91 16</a><a class="header-contacts__item" href="tel:0939564286">+38 (093) 956 42 86</a></div>
+                        </div>
+                    </div>
+                </div>
+            </header><!-- ==========-->
+            <!-- END HEADER-->
+            <!-- ==========-->
+            <div class="container">
+                <div class="intro">
+                    <div class="intro__text">
+                        <div class="welcome">
+                            <div class="welcome__subheader wow slideInLeft">Трехдневный мастер-класс:</div>
+                            <h1 class="welcome__header">Как загрузить 10 000 <br>товаров на Rozetka <br><span class="header-accent">за 72 часа</span></h1>
+                            <div class="welcome__comment">и получать от <span class="count-accent">15 </span>заказов в день</div>
+                            <div class="welcome__act">
+                                <div class="order-places">
+                                    <div class="order-places__button"><button class="button button_a" data-modal="modal-1"><span>Занять место</span></button></div>
+                                    <div class="order-places__count">Осталось 7 мест</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="intro__video">
+                        <div class="intro-video">
+                            <div class="notebook"><img src="img/notebook.png" alt="" />
+                                <div class="notebook__videoplace" style="background-image: url(img/notebook_screen_1.png)"><a class="screen-play" href="https://www.youtube.com/watch?v=nI1vh76lo4E&amp;feature=youtu.be" data-fancybox="data-fancybox"><svg class="svg-sprite">
+                                            <use xlink:href="#svg_sprite_play"></use>
+                                        </svg></a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- ========-->
+        <!-- ПРОБЛЕМЫ-->
+        <!-- ========-->
+        <section class="section">
+            <div class="container">
+                <div class="section-problems">
+                    <div class="section-problems__image"><img src="img/question.png" alt="" /></div>
+                    <div class="section-problems__content">
+                        <div class="section-header"><b>Торгуете на Rozetka?</b> <br>Тогда эти проблемы вам знакомы…</div>
+                        <ul class="list-problems">
+                            <li class="list-problems__item">
+                                <div class="list-problems__icon"><span><svg class="svg-sprite">
+                                            <use xlink:href="#svg_sprite_clock"></use>
+                                        </svg></span></div>
+                                <div class="list-problems__text">Тратите кучу времени на загрузку товара, добавляя максимум по 10 единиц в час</div>
+                            </li>
+                            <li class="list-problems__item">
+                                <div class="list-problems__icon"><span><svg class="svg-sprite">
+                                            <use xlink:href="#svg_sprite_cardboard_box"></use>
+                                        </svg></span></div>
+                                <div class="list-problems__text">При наличии нескольких поставщиков, непонятно где чей товар и как все это контролировать</div>
+                            </li>
+                            <li class="list-problems__item">
+                                <div class="list-problems__icon"><span><svg class="svg-sprite">
+                                            <use xlink:href="#svg_sprite_denied"></use>
+                                        </svg></span></div>
+                                <div class="list-problems__text">Получаете баны за то, что товара не оказалось в наличии</div>
+                            </li>
+                            <li class="list-problems__item">
+                                <div class="list-problems__icon"><span><svg class="svg-sprite">
+                                            <use xlink:href="#svg_sprite_calendar_2"></use>
+                                        </svg></span></div>
+                                <div class="list-problems__text">Товары висят на модерации 4-6 недель, а вы теряете деньги</div>
+                            </li>
+                            <li class="list-problems__item">
+                                <div class="list-problems__icon"><span><svg class="svg-sprite">
+                                            <use xlink:href="#svg_sprite_shortlist"></use>
+                                        </svg></span></div>
+                                <div class="list-problems__text">Загружаете весь прайс поставщика вместо нужных позиций</div>
+                            </li>
+                            <li class="list-problems__item">
+                                <div class="list-problems__icon"><span><svg class="svg-sprite">
+                                            <use xlink:href="#svg_sprite_discount"></use>
+                                        </svg></span></div>
+                                <div class="list-problems__text">Не знаете, где брать качественный товар по выгодным ценам</div>
+                            </li>
+                            <li class="list-problems__item">
+                                <div class="list-problems__icon"><span><svg class="svg-sprite">
+                                            <use xlink:href="#svg_sprite_services"></use>
+                                        </svg></span></div>
+                                <div class="list-problems__text">При изменении цен или другой информации каждый товар приходится редактировать вручную</div>
+                            </li>
+                            <li class="list-problems__item">
+                                <div class="list-problems__icon"><span><svg class="svg-sprite">
+                                            <use xlink:href="#svg_sprite_sales_performance"></use>
+                                        </svg></span></div>
+                                <div class="list-problems__text">Не можете участвовать в промоакциях и зарабатывать по-настоящему</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section><!-- ============-->
+        <!-- END ПРОБЛЕМЫ-->
+        <!-- ============-->
+        <!-- ==============================-->
+        <!-- КАК Я ИЗБАВИЛСЯ ОТ ВСЕГО ЭТОГО-->
+        <!-- ==============================-->
+        <section class="section" id="scroll-1">
+            <div class="container">
+                <div class="section-presentation">
+                    <div class="section-presentation__text">
+                        <div class="section-header"><b>Интересно</b>, как я избавился <br>от всего этого?</div>
+                        <div class="section-subheader">Меня зовут Олег Футорной. Сейчас мои магазины насчитывают свыше 50 000 товаров. А на управление я трачу не больше 30 минут в день.</div>
+                        <p><b>Но так было не всегда. 2 года назад я зашивался!</b></p>
+                        <div class="section-presentation__list">
+                            <ul class="list-check">
+                                <li class="list-check__item">Подготовка товаров для загрузки на Розетку занимала много времени</li>
+                                <li class="list-check__item">Приходилось вручную редактировать каждую карточку товара.</li>
+                                <li class="list-check__item">Не хватало ресурсов сайта для загрузки большого количества сразу</li>
+                                <li class="list-check__item">Была проблема с контролем остатков и изменением цен</li>
+                                <li class="list-check__item">При появлении нескольких поставщиков возникала путаница где чей товар и как все это контролировать</li>
+                            </ul>
+                        </div>
+                        <p><b>Поэтому я сам создал приложение, которое позволяло бы легко управлять магазином - <span class="accent">Marketplace Convert.</span></b></p>
+                    </div>
+                    <div class="section-presentation__video">
+                        <div class="silver-bg"><img src="img/silver-bg.png" alt="" /></div>
+                        <div class="laptop"><img src="img/laptop.png" alt="" />
+                            <div class="laptop__screen" style="background-image: url(img/screenshop-2020-06-26-11.59.43.png)"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section><!-- ==================================-->
+        <!-- END КАК Я ИЗБАВИЛСЯ ОТ ВСЕГО ЭТОГО-->
+        <!-- ==================================-->
+        <!-- ======-->
+        <!-- ОТЗЫВЫ-->
+        <!-- ======-->
+        <section class="section" id="scroll-2">
+            <div class="container">
+                <div class="reviews__header md-show">
+                    <div class="section-header">Сейчас мое приложение <br>используют <b>более 1000 продавцов</b></div>
+                </div>
+                <div class="section-reviews">
+                    <div class="section-reviews__wrapper">
+                        <div class="section-reviews__device">
+                            <div class="notebook"><img src="img/notebook.png" alt="" />
+                                <div class="notebook__videoplace">
+                                    <div class="swiper-container reviews-slider-video" id="reviews-slider-video">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <div class="reviews-slider-video__item" style="background-image: url(img/screenshot-91275.png)"><a class="screen-play" href="https://www.youtube.com/watch?v=-jMmvUV2AyE&amp;feature=youtu.be" data-fancybox="data-fancybox"><svg class="svg-sprite">
+                                                            <use xlink:href="#svg_sprite_play"></use>
+                                                        </svg></a></div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="reviews-slider-video__item" style="background-image: url(img/screenshot-91275-2.png)"><a class="screen-play" href="https://www.youtube.com/watch?v=Igv4l3huomg&amp;feature=youtu.be" data-fancybox="data-fancybox"><svg class="svg-sprite">
+                                                            <use xlink:href="#svg_sprite_play"></use>
+                                                        </svg></a></div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="reviews-slider-video__item" style="background-image: url(img/screenshot-91275-3.png)"><a class="screen-play" href="https://www.youtube.com/watch?v=nI1vh76lo4E&amp;feature=youtu.be" data-fancybox="data-fancybox"><svg class="svg-sprite">
+                                                            <use xlink:href="#svg_sprite_play"></use>
+                                                        </svg></a></div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="reviews-slider-video__item" style="background-image: url(img/screenshot-91275-4.png)"><a class="screen-play" href="https://www.youtube.com/watch?v=h0BA_AB0cQw&amp;feature=youtu.be" data-fancybox="data-fancybox"><svg class="svg-sprite">
+                                                            <use xlink:href="#svg_sprite_play"></use>
+                                                        </svg></a></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section-reviews__content">
+                            <div class="reviews">
+                                <div class="reviews__header md-hide">
+                                    <div class="section-header">Сейчас мое приложение <br>используют <b>более 1000 продавцов</b></div>
+                                </div>
+                            </div>
+                            <div class="reviews__content">
+                                <div class="swiper-container" id="reviews-slider-text">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <div class="review">
+                                                <div class="review__bline"></div>
+                                                <div class="review__left"></div>
+                                                <div class="review__quotes"><img src="img/quotes-start.png" alt="" /><img src="img/quotes-end.png" alt="" /></div>
+                                                <div class="review__text">Хочу поделиться своими впечатлениями по поводу программы Marketplace Convert:</div>
+                                                <div class="review__author">Лучше я не знаю</div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="review">
+                                                <div class="review__bline"></div>
+                                                <div class="review__left"></div>
+                                                <div class="review__quotes"><img src="img/quotes-start.png" alt="" /><img src="img/quotes-end.png" alt="" /></div>
+                                                <div class="review__text">Очень хочу поделиться своими впечатлениями по поводу программы Marketplace Convert.</div>
+                                                <div class="review__author">Лучше я не знаю 2</div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="review">
+                                                <div class="review__bline"></div>
+                                                <div class="review__left"></div>
+                                                <div class="review__quotes"><img src="img/quotes-start.png" alt="" /><img src="img/quotes-end.png" alt="" /></div>
+                                                <div class="review__text">Хочу очень поделиться своими впечатлениями по поводу программы Marketplace Convert:</div>
+                                                <div class="review__author">Лучше я не знаю 3</div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="review">
+                                                <div class="review__bline"></div>
+                                                <div class="review__left"></div>
+                                                <div class="review__quotes"><img src="img/quotes-start.png" alt="" /><img src="img/quotes-end.png" alt="" /></div>
+                                                <div class="review__text">Хотел бы поделиться своими впечатлениями по поводу программы Marketplace Convert:</div>
+                                                <div class="review__author">Лучше я не знаю 4</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="reviews__nav">
+                                <div class="slider-nav">
+                                    <div class="slider-nav__pp" id="reviews-slider-prev"><svg class="svg-sprite">
+                                            <use xlink:href="#svg_sprite_prev"></use>
+                                        </svg></div>
+                                    <div class="slider-nav__pag" id="reviews-slider-pagination"></div>
+                                    <div class="slider-nav__pp slider-nav__pp_next" id="reviews-slider-next"><svg class="svg-sprite">
+                                            <use xlink:href="#svg_sprite_prev"></use>
+                                        </svg></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section-reviews__act"><button class="button button_a" data-modal="modal-1"><span>Пройти обучение</span></button></div>
+                </div>
+            </div>
+        </section><!-- ==========-->
+        <!-- END ОТЗЫВЫ-->
+        <!-- ==========-->
+        <!-- ===============================-->
+        <!-- ХОТИТЕ УЗНАТЬ КАК ВСЕ РАБОТАЕТ?-->
+        <!-- ===============================-->
+        <section class="section" id="scroll-3">
+            <div class="container">
+                <div class="section-header md-show">Хотите узнать как все работает? <br> <b>Регистрируйтесь на мастер-класс!</b></div>
+                <div class="section-overview">
+                    <div class="section-overview__content">
+                        <div class="reviews__header">
+                            <div class="section-header md-hide">Хотите узнать как все работает? <br> <b>Регистрируйтесь на мастер-класс!</b></div>
+                            <div class="section-overview__list">
+                                <div class="collapses">
+                                    <div class="collapses__item">
+                                        <div class="collapse" data-modal="modal-2" data-timetable="0">
+                                            <div class="collapse__header">1 день</div>
+                                            <div class="collapse__content">
+                                                <div class="stage-text">Правильная структура XML файла с каталогом товаров</div>
+                                            </div><button class="collapse__toggle"><svg class="svg-sprite">
+                                                    <use xlink:href="#svg_sprite_open_close"></use>
+                                                </svg></button>
+                                        </div>
+                                    </div>
+                                    <div class="collapses__item">
+                                        <div class="collapse" data-modal="modal-2" data-timetable="1">
+                                            <div class="collapse__header">2 день</div>
+                                            <div class="collapse__content">
+                                                <div class="stage-text">Подготовка XML файла</div>
+                                            </div><button class="collapse__toggle"><svg class="svg-sprite">
+                                                    <use xlink:href="#svg_sprite_open_close"></use>
+                                                </svg></button>
+                                        </div>
+                                    </div>
+                                    <div class="collapses__item">
+                                        <div class="collapse" data-modal="modal-2" data-timetable="2">
+                                            <div class="collapse__header">3 день</div>
+                                            <div class="collapse__content">
+                                                <div class="stage-text">Массовое изменение и контроль цены товаров</div>
+                                            </div><button class="collapse__toggle"><svg class="svg-sprite">
+                                                    <use xlink:href="#svg_sprite_open_close"></use>
+                                                </svg></button>
+                                        </div>
+                                    </div>
+                                    <div class="collapses__item">
+                                        <div class="collapse" data-modal="modal-2" data-timetable="3">
+                                            <div class="collapse__header">Бонус</div>
+                                            <div class="collapse__content">
+                                                <div class="stage-text">Видео курс, контакты поставщиков</div>
+                                            </div><button class="collapse__toggle"><svg class="svg-sprite">
+                                                    <use xlink:href="#svg_sprite_open_close"></use>
+                                                </svg></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section-overview__video">
+                        <div class="silver-bg"><img src="img/silver-bg.png" alt="" /></div>
+                        <div class="laptop"><img src="img/laptop.png" alt="" />
+                            <div class="laptop__screen" style="background-image: url(img/notebook_screen_2.png)">
+                                <div class="screen-play"><svg class="svg-sprite">
+                                        <use xlink:href="#svg_sprite_play"></use>
+                                    </svg></div>
+                            </div>
+                            <div class="device-about">Видеообзор программы</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section><!-- ===================================-->
+        <!-- END ХОТИТЕ УЗНАТЬ КАК ВСЕ РАБОТАЕТ?-->
+        <!-- ===================================-->
+        <!-- ========================-->
+        <!-- ЗАРЕГИСТРИРУЙТЕСЬ СЕЙЧАС-->
+        <!-- ========================-->
+        <section class="section" id="scroll-4">
+            <div class="container">
+                <div class="promo-wrapper">
+                    <div class="promo-surprise">
+                        <div class="promo-surprise__content">
+                            <div class="promo-surprise__left">
+                                <div class="promo-surprise__header">Зарегистрируйтесь сейчас <br> <b>и получите подарок</b></div>
+                                <div class="promo-surprise__price">
+                                    <div class="price-old">599</div>
+                                    <div class="price"><span>299</span><span>грн</span></div>
+                                </div>
+                            </div>
+                            <div class="promo-surprise__img"><img src="img/surprise.png" alt="" /></div>
+                            <div class="promo-surprise__right"><button class="button button_a" data-modal="modal-1"><span>Зарегистрироваться</span></button></div>
+                        </div>
+                        <div class="promo-surprise__mark">Только 3 дня</div>
+                    </div>
+                </div>
+            </div>
+        </section><!-- ============================-->
+        <!-- END ЗАРЕГИСТРИРУЙТЕСЬ СЕЙЧАС-->
+        <!-- ============================-->
+        <!-- =================-->
+        <!-- ОТВЕТЫ НА ВОПРОСЫ-->
+        <!-- =================-->
+        <section class="section" id="scroll-5">
+            <div class="container">
+                <div class="section-answers">
+                    <div class="section-answers__image">
+                        <div class="silver-bg"><img src="img/silver-bg-left.png" alt="" /></div><img src="img/bnr.png" alt="" />
+                    </div>
+                    <div class="section-answers__text">
+                        <div class="section-header">Именно на мастер-классе продавцы Rozetka получают ответы <b>на 4 главных вопроса</b></div>
+                        <div class="answers">
+                            <div class="answers__item">
+                                <div class="answers__icon"><img src="img/check.png" alt="" /></div>
+                                <div class="answers__text">Как быстро загружать товары и проходить модерацию за 14 дней</div>
+                            </div>
+                            <div class="answers__item">
+                                <div class="answers__icon"><img src="img/list.png" alt="" /></div>
+                                <div class="answers__text">Как работать с любым количеством поставщиков без путаницы в товарах</div>
+                            </div>
+                            <div class="answers__item">
+                                <div class="answers__icon"><img src="img/databese_backup.png" alt="" /></div>
+                                <div class="answers__text">Как контролировать наличие товаров и обновление ассортимента</div>
+                            </div>
+                            <div class="answers__item">
+                                <div class="answers__icon"><img src="img/price_tag.png" alt="" /></div>
+                                <div class="answers__text">Как участвовать в акциях и промо рассылках от Rozetka</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section><!-- =================-->
+        <!-- ОТВЕТЫ НА ВОПРОСЫ-->
+        <!-- =================-->
+        <!-- ============================-->
+        <!-- КОМУ НЕОБХОДИМ МАСТЕР-КЛАСС?-->
+        <!-- ============================-->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">Кому необходим <b>мастер-класс?</b></div>
+                <div class="section-audience">
+                    <div class="section-audience__item">
+                        <div class="audience">
+                            <div class="audience__wrapper">
+                                <div class="audience__header"><img src="img/audience-1.png" alt="" /></div>
+                                <div class="audience__content">
+                                    <div class="audience__for">После мастер-класса вы начнете развивать свой магазин с новой скоростью:</div>
+                                    <div class="audience__list">
+                                        <ul class="list-check">
+                                            <li class="list-check__item">Загружать по 10 000 товаров за 72 часа контролировать остатки товаров одновременно у многих поставщиков</li>
+                                            <li class="list-check__item">Проходить модерацию за 14 дней благодаря правильной структуре XML файла</li>
+                                            <li class="list-check__item">Контролировать цены на товары и массово их изменять</li>
+                                            <li class="list-check__item">Узнаете, как параметры и характеристики товаров влияют на продвижение</li>
+                                        </ul>
+                                    </div>
+                                    <div class="audience__act"><button class="button button_a" data-modal="modal-1"><span>Принять участие</span></button></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section-audience__item">
+                        <div class="audience">
+                            <div class="audience__wrapper">
+                                <div class="audience__header"><img src="img/audience-2.png" alt="" /></div>
+                                <div class="audience__content">
+                                    <div class="audience__for">После мастер-класса вы начнете развивать свой магазин с новой скоростью:</div>
+                                    <div class="audience__list">
+                                        <ul class="list-check">
+                                            <li class="list-check__item">Загружать по 10 000 товаров за 72 часа контролировать остатки товаров одновременно у многих поставщиков</li>
+                                            <li class="list-check__item">Проходить модерацию за 14 дней благодаря правильной структуре XML файла</li>
+                                            <li class="list-check__item">Контролировать цены на товары и массово их изменять</li>
+                                            <li class="list-check__item">Узнаете, как параметры и характеристики товаров влияют на продвижение</li>
+                                        </ul>
+                                    </div>
+                                    <div class="audience__act"><button class="button button_a" data-modal="modal-1"><span>Принять участие</span></button></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section><!-- ================================-->
+        <!-- END КОМУ НЕОБХОДИМ МАСТЕР-КЛАСС?-->
+        <!-- ================================-->
+        <!-- ==================-->
+        <!-- ОТЗЫВЫ-КОММЕНТАРИИ-->
+        <!-- ==================-->
+        <section class="section">
+            <div class="swiper-container comments-slider" id="slider-comments">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><a class="comment-user" href="img/comments/1.png" data-fancybox="comments"><img src="img/comments/1.png" alt="" /></a><a class="comment-user" href="img/comments/2.png" data-fancybox="comments"><img src="img/comments/2.png" alt="" /></a></div>
+                    <div class="swiper-slide"><a class="comment-user" href="img/comments/3.png" data-fancybox="comments"><img src="img/comments/3.png" alt="" /></a><a class="comment-user" href="img/comments/4.png" data-fancybox="comments"><img src="img/comments/4.png" alt="" /></a></div>
+                    <div class="swiper-slide"><a class="comment-user" href="img/comments/5.png" data-fancybox="comments"><img src="img/comments/5.png" alt="" /></a><a class="comment-user" href="img/comments/6.png" data-fancybox="comments"><img src="img/comments/6.png" alt="" /></a></div>
+                    <div class="swiper-slide"><a class="comment-user" href="img/comments/7.png" data-fancybox="comments"><img src="img/comments/7.png" alt="" /></a><a class="comment-user" href="img/comments/8.png" data-fancybox="comments"><img src="img/comments/8.png" alt="" /></a></div>
+                    <div class="swiper-slide"><a class="comment-user" href="img/comments/1.png" data-fancybox="comments"><img src="img/comments/1.png" alt="" /></a><a class="comment-user" href="img/comments/2.png" data-fancybox="comments"><img src="img/comments/2.png" alt="" /></a></div>
+                    <div class="swiper-slide"><a class="comment-user" href="img/comments/3.png" data-fancybox="comments"><img src="img/comments/3.png" alt="" /></a><a class="comment-user" href="img/comments/4.png" data-fancybox="comments"><img src="img/comments/4.png" alt="" /></a></div>
+                    <div class="swiper-slide"><a class="comment-user" href="img/comments/5.png" data-fancybox="comments"><img src="img/comments/5.png" alt="" /></a><a class="comment-user" href="img/comments/6.png" data-fancybox="comments"><img src="img/comments/6.png" alt="" /></a></div>
+                    <div class="swiper-slide"><a class="comment-user" href="img/comments/7.png" data-fancybox="comments"><img src="img/comments/7.png" alt="" /></a><a class="comment-user" href="img/comments/8.png" data-fancybox="comments"><img src="img/comments/8.png" alt="" /></a></div>
+                </div>
+            </div>
+        </section><!-- ======================-->
+        <!-- END ОТЗЫВЫ-КОММЕНТАРИИ-->
+        <!-- ======================-->
+        <!-- ==============================-->
+        <!-- ОТВЕТЫ НА САМЫЕ ЧАСТЫЕ ВОПРОСЫ-->
+        <!-- ==============================-->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">Ответы на <b>самые частые вопросы</b></div>
+                <div class="section-faq">
+                    <div class="collapses">
+                        <div class="collapses__item">
+                            <div class="collapse" data-iscollaps="data-iscollaps">
+                                <div class="collapse__header">Вопрос</div>
+                                <div class="collapse__content">Редакция предоставляет абсолютно любому человеку (паспорт с регистрацией предъявлять не обязательно) право спросить нас — нужно отправить ваш вопрос с этой страницы — о том, что его волнует в настоящую минуту.</div><button class="collapse__toggle"><svg class="svg-sprite">
+                                        <use xlink:href="#svg_sprite_open_close"></use>
+                                    </svg></button>
+                            </div>
+                            <div class="collapse-drop">
+                                <p>Редакция просит не задавать вопросов на темы, про которые никогда не пишет журнал «Вокруг света» (политика, например, или гламур, или светская жизнь).</p>
+                                <p>Редакция готова честно указывать, почему из всех появившихся на сайте вопросов она выбрала для публикации именно те, которые фигурируют ниже.</p>
+                            </div>
+                        </div>
+                        <div class="collapses__item">
+                            <div class="collapse" data-iscollaps="data-iscollaps">
+                                <div class="collapse__header">Вопрос</div>
+                                <div class="collapse__content">Редакция предоставляет абсолютно любому человеку (паспорт с регистрацией предъявлять не обязательно) право спросить нас — нужно отправить ваш вопрос с этой страницы — о том, что его волнует в настоящую минуту.</div><button class="collapse__toggle"><svg class="svg-sprite">
+                                        <use xlink:href="#svg_sprite_open_close"></use>
+                                    </svg></button>
+                            </div>
+                            <div class="collapse-drop">
+                                <p>Редакция просит не задавать вопросов на темы, про которые никогда не пишет журнал «Вокруг света» (политика, например, или гламур, или светская жизнь).</p>
+                                <p>Редакция готова честно указывать, почему из всех появившихся на сайте вопросов она выбрала для публикации именно те, которые фигурируют ниже.</p>
+                            </div>
+                        </div>
+                        <div class="collapses__item">
+                            <div class="collapse" data-iscollaps="data-iscollaps">
+                                <div class="collapse__header">Вопрос</div>
+                                <div class="collapse__content">Редакция предоставляет абсолютно любому человеку (паспорт с регистрацией предъявлять не обязательно) право спросить нас — нужно отправить ваш вопрос с этой страницы — о том, что его волнует в настоящую минуту.</div><button class="collapse__toggle"><svg class="svg-sprite">
+                                        <use xlink:href="#svg_sprite_open_close"></use>
+                                    </svg></button>
+                            </div>
+                            <div class="collapse-drop">
+                                <p>Редакция просит не задавать вопросов на темы, про которые никогда не пишет журнал «Вокруг света» (политика, например, или гламур, или светская жизнь).</p>
+                                <p>Редакция готова честно указывать, почему из всех появившихся на сайте вопросов она выбрала для публикации именно те, которые фигурируют ниже.</p>
+                            </div>
+                        </div>
+                        <div class="collapses__item">
+                            <div class="collapse" data-iscollaps="data-iscollaps">
+                                <div class="collapse__header">Вопрос</div>
+                                <div class="collapse__content">Редакция предоставляет абсолютно любому человеку (паспорт с регистрацией предъявлять не обязательно) право спросить нас — нужно отправить ваш вопрос с этой страницы — о том, что его волнует в настоящую минуту.</div><button class="collapse__toggle"><svg class="svg-sprite">
+                                        <use xlink:href="#svg_sprite_open_close"></use>
+                                    </svg></button>
+                            </div>
+                            <div class="collapse-drop">
+                                <p>Редакция просит не задавать вопросов на темы, про которые никогда не пишет журнал «Вокруг света» (политика, например, или гламур, или светская жизнь).</p>
+                                <p>Редакция готова честно указывать, почему из всех появившихся на сайте вопросов она выбрала для публикации именно те, которые фигурируют ниже.</p>
+                            </div>
+                        </div>
+                        <div class="collapses__item">
+                            <div class="collapse" data-iscollaps="data-iscollaps">
+                                <div class="collapse__header">Вопрос</div>
+                                <div class="collapse__content">Редакция предоставляет абсолютно любому человеку (паспорт с регистрацией предъявлять не обязательно) право спросить нас — нужно отправить ваш вопрос с этой страницы — о том, что его волнует в настоящую минуту.</div><button class="collapse__toggle"><svg class="svg-sprite">
+                                        <use xlink:href="#svg_sprite_open_close"></use>
+                                    </svg></button>
+                            </div>
+                            <div class="collapse-drop">
+                                <p>Редакция просит не задавать вопросов на темы, про которые никогда не пишет журнал «Вокруг света» (политика, например, или гламур, или светская жизнь).</p>
+                                <p>Редакция готова честно указывать, почему из всех появившихся на сайте вопросов она выбрала для публикации именно те, которые фигурируют ниже.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section><!-- ==================================-->
+        <!-- END ОТВЕТЫ НА САМЫЕ ЧАСТЫЕ ВОПРОСЫ-->
+        <!-- ==================================-->
+        <!-- ======-->
+        <!-- FOOTER-->
+        <!-- ======-->
+        <footer class="footer">
+            <!-- =============================-->
+            <!-- ВЫ МОЖЕТЕ ЗАРАБАТЫВАТЬ БОЛЬШЕ-->
+            <!-- =============================-->
+            <div class="container">
+                <div class="promo-wrapper promo-motiv-wrapper">
+                    <div class="promo-motiv">
+                        <div class="promo-motiv__content">
+                            <div class="promo-motiv__text">
+                                <div class="promo-motiv__header"><b>Вы можете зарабатывать больше.</b> <br>Просто никто вас не научил <br>как это делать!</div>
+                                <div class="promo-motiv__subheader">Занимайте свое место и начинайте пользоваться самой простой и эффективной системой наполнения магазина на Розетке!</div>
+                            </div>
+                            <div class="promo-motiv__act">
+                                <div class="promo-motiv__price">
+                                    <div class="price-old">599</div>
+                                    <div class="price"><span>299</span><span>грн</span></div>
+                                </div>
+                                <div class="promo-motiv__comment">согласитесь - копейки, когда на кону десятки тысяч и будущее вашего бизнеса…</div>
+                                <div class="promo-motiv__button"><button class="button button_a" data-modal="modal-1"><span>Занять место</span></button></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- =================================-->
+            <!-- END ВЫ МОЖЕТЕ ЗАРАБАТЫВАТЬ БОЛЬШЕ-->
+            <!-- =================================-->
+            <div class="container">
+                <div class="footer__content">
+                    <div class="footer__logo"><img src="img/logo-2.svg" alt="" /><span class="md-hide">©2020 Marketplace Convert</span></div>
+                    <div class="footer__legal">
+                        <div class="footer__person"><span>ФЛП Антонов П.В.</span><span>ИНН 3221420313</span></div>
+                        <div class="footer__logos"><img src="img/fondy_logo.png" alt="" /><img src="img/vbv.png" alt="" /><img src="img/mcsc.png" alt="" /></div>
+                    </div>
+                    <div class="footer__links"><a href="">Гарантия возврата</a><br /><a href="">Согласие с рассылкой</a><br /><a href="">Договор публичной оферты</a><br /><a href="">Партнерская программа</a><br /><a href="">Политика конфиденциальности</a></div>
+                    <div class="footer__conn">
+                        <div class="footer__contacts"><a href="tel:0686619116"><svg class="svg-sprite">
+                                    <use xlink:href="#svg_sprite_phone_2"></use>
+                                </svg><span>+38 (068) 661 91 16</span></a><br /><a href="tel:0939564286"><svg class="svg-sprite">
+                                    <use xlink:href="#svg_sprite_phone_2"></use>
+                                </svg><span>+38 (093) 956 42 86</span></a><br /><a href="mailto:info@xmlreactor.shop"><svg class="svg-sprite">
+                                    <use xlink:href="#svg_sprite_mail"></use>
+                                </svg><span>info@xmlreactor.shop</span></a></div>
+                        <div class="footer__social"><a href=""><svg class="svg-sprite">
+                                    <use xlink:href="#svg_sprite_facebook"></use>
+                                </svg></a><a href=""><svg class="svg-sprite">
+                                    <use xlink:href="#svg_sprite_youtube"></use>
+                                </svg></a><a href=""><svg class="svg-sprite">
+                                    <use xlink:href="#svg_sprite_telegram"></use>
+                                </svg></a></div>
+                    </div>
+                </div>
+            </div>
+        </footer><!-- ==========-->
+        <!-- END FOOTER-->
+        <!-- ==========-->
     </div>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
