@@ -1,9 +1,0 @@
-.first-screen {
-  position: relative;
-  padding-bottom: 200px;
-  max-width: 1920px;
-  margin: 0 auto;
-  @include media-breakpoint-down(md) {
-    padding-bottom: 0;
-  }
-}
