@@ -9,7 +9,7 @@ window._breakpoints = {
   xl: 1200
 };
 
-$(document).ready(function() {  
+$(document).ready(function() {
   new WOW().init();
 
   /**
@@ -87,7 +87,7 @@ $(document).ready(function() {
     });
   })();
 
-    /**
+  /**
    * Слайдер "Примеры"
    */
   (function() {
@@ -106,7 +106,7 @@ $(document).ready(function() {
     });
   })();
 
-    /**
+  /**
    * Слайдер "Магазини"
    */
   (function() {
@@ -204,6 +204,8 @@ $(document).ready(function() {
         message = "Введите имя";
       } else if ($(element).attr("name") == "phone") {
         message = "Введите номер телефона";
+      } else if ($(element).attr("name") == "email") {
+        message = "Введите e-mail";
       }
       $(element)
         .parent()
@@ -240,6 +242,15 @@ $(document).ready(function() {
                 }
               },
               minlength: 10
+            },
+            email: {
+              required: {
+                depends: function() {
+                  $(this).val($.trim($(this).val()));
+                  return true;
+                }
+              },
+              email: true
             }
           },
           success: function(label, element) {
@@ -251,8 +262,7 @@ $(document).ready(function() {
           },
           errorPlacement: showError,
           submitHandler: function(form) {
-            
-           $.ajax({
+            $.ajax({
               url: "send.php",
               type: "POST",
               data: {
@@ -278,7 +288,7 @@ $(document).ready(function() {
                 $(form)
                   .siblings(".form-send-success")
                   .addClass("form-send-success_show");
-               /* setTimeout(function() {
+                /* setTimeout(function() {
                   var id = $(form)
                     .closest(".modal")
                     .attr("id");
@@ -290,10 +300,7 @@ $(document).ready(function() {
                   .siblings(".form-send-error")
                   .slideDown(500);
               }
-              
             });
-
-  
           }
         });
     });
@@ -338,5 +345,13 @@ $(document).ready(function() {
       );
     });
   })();
-});
 
+  /**
+   * Маска для номера телефона
+   */
+  (function() {
+    $(".phone-mask").mask("+38 (000) 000 00 00", {
+      placeholder: "+38 (___) ___ __ __"
+    });
+  })();
+});
