@@ -5,8 +5,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Title</title>
+    <title>Marketplace Convert - приложение для тех, кто торгует на Розетке</title>
     <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/mod.css" />
     <link rel="stylesheet" href="vendor/swiper/swiper.min.css" />
     <link rel="stylesheet" href="vendor/fancybox/jquery.fancybox.min.css" />
     <link rel="stylesheet" href="vendor/animate.min.css" />
@@ -14,7 +15,8 @@
     <script src="vendor/swiper/swiper.min.js"></script>
     <script src="vendor/jquery.validate.min.js"></script>
     <script src="vendor/fancybox/jquery.fancybox.min.js"></script>
-    <script src="vendor/wow.min.js"></script><!-- =====================-->
+    <script src="vendor/wow.min.js"></script>
+    <script type="text/javascript" src="js/maskinput.js"></script><!-- =====================-->
     <!-- ЗАГРУЗКА SVG СПРАЙТОВ-->
     <!-- =====================-->
     <script>
@@ -47,16 +49,25 @@
                         <div class="modal-form">
                             <div class="modal-form__header">Заполните форму</div>
                             <div class="modal-form__subheader">Мы свяжемся с Вами в ближайшее время</div>
-                            <form class="modal-form__form form-modal-1" name="Форма №1">
+                            <form class="modal-form__form form-modal-1" name="Форма №1" id="form_masterklass">
                                 <div class="modal-form__input">
                                     <div class="input-text"><input type="text" name="name" placeholder="Ваше имя" /></div>
                                 </div>
                                 <div class="modal-form__input">
-                                    <div class="input-text"><input type="text" name="phone" placeholder="Ваш номер телефона" /></div>
+                                    <div class="input-text"><input type="text" name="phone" placeholder="+38 (___)  ___ - __ - __" /></div>
                                 </div>
                                 <div class="modal-form__input">
                                     <div class="input-text"><input type="text" name="email" placeholder="Ваш e-mail" /></div>
                                 </div>
+                                <input type="hidden" name="lead" value="<?= $lead; ?>">
+<input type="hidden" name="utm_source" value="<?= $utm_source; ?>">
+<input type="hidden" name="utm_medium" value="<?= $utm_medium; ?>">
+<input type="hidden" name="utm_term" value="<?= $utm_term; ?>">
+<input type="hidden" name="utm_content" value="<?= $utm_content; ?>">
+<input type="hidden" name="utm_campaign" value="<?= $utm_campaign; ?>">
+<input type="hidden" name="tovar" value="168259">
+<input type="hidden" name="price" value="299">
+<input type="hidden" name="tarif" value="3_dey_masterklass">
                                 <div class="modal-form__act">
                                     <div class="order-places">
                                         <div class="order-places__button"><button class="button button_a"><span>Зарегистрироваться</span></button></div>
@@ -65,13 +76,32 @@
                                 </div>
                             </form>
                             <div class="form-send-error">Ошибка. Не удалось отправить форму.</div>
-                            <div class="form-send-success">Спасибо!<br> Ожидайте звонок.</div>
+                           <!-- <div class="form-send-success">Спасибо!<br> Ожидайте звонок.</div>-->
+                            <div class="form-send-success promo-motiv">
+                                    <div class="promo-motiv__content">
+                                        <div class="promo-motiv__text">
+                                            <div class="promo-motiv__header"><b>Вы можете зарабатывать больше.</b> <br>Просто никто вас не научил как это делать!</div>
+                                            <div class="promo-motiv__subheader">Занимайте свое место и начинайте пользоваться самой простой и эффективной системой наполнения магазина на Розетке!</div>
+                                        </div>
+                                        <div class="promo-motiv__act">
+                                            <div class="promo-motiv__price">
+                                                <div class="price-old">599</div>
+                                                <div class="price"><span>299</span><span>грн</span></div>
+                                            </div>
+                                            <div class="promo-motiv__comment">Выберите платежную систему, 
+                                                    чтобы оплатить участие</div>
+                                            <div class="systems"><form action="https://api.fondy.eu/s/lH1figbPttNBRE7"><button class="fondy" type="submit"><img src="img/fondy.png"></button></form>
+                                                <form action="https://api.fondy.eu/s/lH1figbPttNBRE7"><button class="wayforpay" type="submit"><img src="img/wayforpay.png"></button></form>
+                                        </div>
+                                    </div>
+                                </div></div>
                         </div>
                     </div>
                     <div class="modal-window__close"></div>
                 </div>
             </div>
-        </div><!-- ========================-->
+        </div>
+       <!-- ========================-->
         <!-- END МОДАЛЬНОЕ ОКНО ФОРМА-->
         <!-- ========================-->
         <!-- =========================-->
@@ -118,26 +148,26 @@
                                     <div class="dayabout">
                                         <div class="dayabout__name">2 день</div>
                                         <div class="dayabout__content">
-                                            <div class="dayabout__header">Правильная структура XML файла с каталогом товаров</div>
+                                            <div class="dayabout__header">Подготовка XML файла</div>
                                             <div class="dayabout__list">
                                                 <ol class="number-list">
                                                     <li class="number-list__item">
-                                                        <div class="number-list__number">1</div>Как ускорить выгрузку товаров, выбрав правильную систему наполнения магазина на Розетке
+                                                        <div class="number-list__number">1</div>Параметры XML, которые влияют на рейтинг в поисковой выдаче
                                                     </li>
                                                     <li class="number-list__item">
-                                                        <div class="number-list__number">2</div>Что такое идеальная структура XML файла
+                                                        <div class="number-list__number">2</div>Как структура XML влияет на скорость модерации
                                                     </li>
                                                     <li class="number-list__item">
-                                                        <div class="number-list__number">3</div>Обязательные и дополнительные параметры XML
+                                                        <div class="number-list__number">3</div>Как красиво оформить карточку товара, чтобы создать доверие
                                                     </li>
                                                     <li class="number-list__item">
-                                                        <div class="number-list__number">4</div>Создание идеальной структуры XML файла
+                                                        <div class="number-list__number">4</div>Как правильно добавлять характеристики товара
                                                     </li>
                                                     <li class="number-list__item">
-                                                        <div class="number-list__number">5</div>Соответствие категорий поставшика с категориями Розетки
+                                                        <div class="number-list__number">5</div>Подготовка фото и описания товара для быстрой модерации 5. Решение типичных ошибок при модерации товаров на Розетке
                                                     </li>
                                                     <li class="number-list__item">
-                                                        <div class="number-list__number">6</div>Как все сделать за 5 минут с помощью MarketPlaceConvert
+                                                        <div class="number-list__number">6</div>Как не допускать повторную модерацию товаров
                                                     </li>
                                                 </ol>
                                             </div>
@@ -148,26 +178,26 @@
                                     <div class="dayabout">
                                         <div class="dayabout__name">3 день</div>
                                         <div class="dayabout__content">
-                                            <div class="dayabout__header">Правильная структура XML файла с каталогом товаров</div>
+                                            <div class="dayabout__header">Массовое изменение и контроль цены товаров</div>
                                             <div class="dayabout__list">
                                                 <ol class="number-list">
                                                     <li class="number-list__item">
-                                                        <div class="number-list__number">1</div>Как ускорить выгрузку товаров, выбрав правильную систему наполнения магазина на Розетке
+                                                        <div class="number-list__number">1</div>Как массово изменять цены в два клика и экономить 2-4 часа в день
                                                     </li>
                                                     <li class="number-list__item">
-                                                        <div class="number-list__number">2</div>Что такое идеальная структура XML файла
+                                                        <div class="number-list__number">2</div>Как контролировать остатки у поставщиков и обновлять актуальность наличия товаров
                                                     </li>
                                                     <li class="number-list__item">
-                                                        <div class="number-list__number">3</div>Обязательные и дополнительные параметры XML
+                                                        <div class="number-list__number">3</div>Как контролировать обновление ассортимента поставщиков и добавлять новые товары без дублей
                                                     </li>
                                                     <li class="number-list__item">
                                                         <div class="number-list__number">4</div>Создание идеальной структуры XML файла
                                                     </li>
                                                     <li class="number-list__item">
-                                                        <div class="number-list__number">5</div>Соответствие категорий поставшика с категориями Розетки
+                                                        <div class="number-list__number">5</div>Как проводить акции, распродажи, участвовать в промо-рассылках Розетки
                                                     </li>
                                                     <li class="number-list__item">
-                                                        <div class="number-list__number">6</div>Как все сделать за 5 минут с помощью MarketPlaceConvert
+                                                        <div class="number-list__number">6</div>Как обходить конкурентов правильным контентом в карточки товара
                                                     </li>
                                                 </ol>
                                             </div>
@@ -178,26 +208,26 @@
                                     <div class="dayabout">
                                         <div class="dayabout__name">Бонус</div>
                                         <div class="dayabout__content">
-                                            <div class="dayabout__header">Правильная структура XML файла с каталогом товаров</div>
+                                            <div class="dayabout__header">Видео курс, контакты поставщиков</div>
                                             <div class="dayabout__list">
                                                 <ol class="number-list">
                                                     <li class="number-list__item">
-                                                        <div class="number-list__number">1</div>Как ускорить выгрузку товаров, выбрав правильную систему наполнения магазина на Розетке
+                                                        <div class="number-list__number">1</div> Видео курс "XML для РОЗЕТКИ за 5 минут" (15 видео уроков) 
                                                     </li>
                                                     <li class="number-list__item">
-                                                        <div class="number-list__number">2</div>Что такое идеальная структура XML файла
+                                                        <div class="number-list__number">2</div>Готовый XML файл на 100 товаров
                                                     </li>
                                                     <li class="number-list__item">
-                                                        <div class="number-list__number">3</div>Обязательные и дополнительные параметры XML
+                                                        <div class="number-list__number">3</div>Контакты поставщиков для Розетки 
                                                     </li>
                                                     <li class="number-list__item">
-                                                        <div class="number-list__number">4</div>Создание идеальной структуры XML файла
+                                                        <div class="number-list__number">4</div>Доступ к приложению MarketPlaceConvert на 15 дней
                                                     </li>
                                                     <li class="number-list__item">
-                                                        <div class="number-list__number">5</div>Соответствие категорий поставшика с категориями Розетки
+                                                        <div class="number-list__number">5</div>Настройки правильного XML для MarketPlaceConvert
                                                     </li>
                                                     <li class="number-list__item">
-                                                        <div class="number-list__number">6</div>Как все сделать за 5 минут с помощью MarketPlaceConvert
+                                                        <div class="number-list__number">6</div>Личная консультация. Ответы на интересующие вопросы
                                                     </li>
                                                 </ol>
                                             </div>
@@ -280,7 +310,7 @@
                     <div class="intro__video">
                         <div class="intro-video">
                             <div class="notebook"><img src="img/notebook.png" alt="" />
-                                <div class="notebook__videoplace" style="background-image: url(img/notebook_screen_1.png)"><a class="screen-play" href="https://www.youtube.com/watch?v=nI1vh76lo4E&amp;feature=youtu.be" data-fancybox="data-fancybox"><svg class="svg-sprite">
+                                <div class="notebook__videoplace" style="background-image: url(img/notebook_screen_1.png)"><a class="screen-play" href="https://www.youtube.com/watch?v=nI1vh76lo4E&amp;feature=youtu.be" data-fancybox="invite"><svg class="svg-sprite">
                                             <use xlink:href="#svg_sprite_play"></use>
                                         </svg></a></div>
                             </div>
@@ -376,8 +406,31 @@
                     </div>
                     <div class="section-presentation__video">
                         <div class="silver-bg"><img src="img/silver-bg.png" alt="" /></div>
-                        <div class="laptop"><img src="img/laptop.png" alt="" />
-                            <div class="laptop__screen" style="background-image: url(img/screenshop-2020-06-26-11.59.43.png)"></div>
+                        <div class="laptop">
+                                <div class="swiper-container" id="slider-shops">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                    <a href="img/scr1.jpg" data-fancybox="screens"> <img src="img/scr1.jpg"></a>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                    <a href="img/scr2.jpg" data-fancybox="screens">   <img src="img/scr2.jpg"></a>
+                                            </div>
+                                           
+                                        </div>
+                                    </div>
+                                    <div class="reviews__nav">
+                                            <div class="slider-nav">
+                                                <div class="slider-nav__pp" id="shops-prev"><svg class="svg-sprite">
+                                                        <use xlink:href="#svg_sprite_prev"></use>
+                                                    </svg></div>
+                                                <div class="slider-nav__pag" id="shops-pagination"></div>
+                                                <div class="slider-nav__pp slider-nav__pp_next" id="shops-next"><svg class="svg-sprite">
+                                                        <use xlink:href="#svg_sprite_prev"></use>
+                                                    </svg></div>
+                                            </div>
+                                        </div>
+                            <!--<img src="img/laptop.png" alt="" />
+                            <div class="laptop__screen" style="background-image: url(img/screenshop-2020-06-26-11.59.43.png)"></div>-->
                         </div>
                     </div>
                 </div>
@@ -385,6 +438,23 @@
         </section><!-- ==================================-->
         <!-- END КАК Я ИЗБАВИЛСЯ ОТ ВСЕГО ЭТОГО-->
         <!-- ==================================-->
+         <!-- ==================-->
+        <!-- МАГАЗИНЫ-->
+        <!-- ==================-->
+        <section class="section examples">
+                <div class="swiper-container comments-slider" id="slider-examples">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><a class="example" href="img/shops/01.jpg" data-fancybox="shops"><img src="img/shops/01.jpg" alt="" /></a></div>
+                        <div class="swiper-slide"><a class="example" href="img/shops/02.jpg" data-fancybox="shops"><img src="img/shops/02.jpg" alt="" /></a></div>
+                        <div class="swiper-slide"><a class="example" href="img/shops/03.jpg" data-fancybox="shops"><img src="img/shops/03.jpg" alt="" /></a></div>
+                        <div class="swiper-slide"><a class="example" href="img/shops/04.jpg" data-fancybox="shops"><img src="img/shops/04.jpg" alt="" /></a></div>
+                        <div class="swiper-slide"><a class="example" href="img/shops/05.jpg" data-fancybox="shops"><img src="img/shops/05.jpg" alt="" /></a></div>
+                        <div class="swiper-slide"><a class="example" href="img/shops/06.jpg" data-fancybox="shops"><img src="img/shops/06.jpg" alt="" /></a></div>
+                    </div>
+                </div>
+            </section><!-- ======================-->
+            <!-- END МАГАЗИНЫ-->
+            <!-- ======================-->
         <!-- ======-->
         <!-- ОТЗЫВЫ-->
         <!-- ======-->
@@ -440,7 +510,7 @@
                                                 <div class="review__left"></div>
                                                 <div class="review__quotes"><img src="img/quotes-start.png" alt="" /><img src="img/quotes-end.png" alt="" /></div>
                                                 <div class="review__text">Хочу поделиться своими впечатлениями по поводу программы Marketplace Convert:</div>
-                                                <div class="review__author">Лучше я не знаю</div>
+                                                <div class="review__author">лучше я не знаю</div>
                                             </div>
                                         </div>
                                         <div class="swiper-slide">
@@ -448,8 +518,8 @@
                                                 <div class="review__bline"></div>
                                                 <div class="review__left"></div>
                                                 <div class="review__quotes"><img src="img/quotes-start.png" alt="" /><img src="img/quotes-end.png" alt="" /></div>
-                                                <div class="review__text">Очень хочу поделиться своими впечатлениями по поводу программы Marketplace Convert.</div>
-                                                <div class="review__author">Лучше я не знаю 2</div>
+                                                <div class="review__text">С помощью вебинара поймал очень много инсайтов,</div>
+                                                <div class="review__author">как просто и легко можно работать с Розеткой</div>
                                             </div>
                                         </div>
                                         <div class="swiper-slide">
@@ -457,8 +527,8 @@
                                                 <div class="review__bline"></div>
                                                 <div class="review__left"></div>
                                                 <div class="review__quotes"><img src="img/quotes-start.png" alt="" /><img src="img/quotes-end.png" alt="" /></div>
-                                                <div class="review__text">Хочу очень поделиться своими впечатлениями по поводу программы Marketplace Convert:</div>
-                                                <div class="review__author">Лучше я не знаю 3</div>
+                                                <div class="review__text">Реально очень крутая программа,</div>
+                                                <div class="review__author">которая сделала быстрее<br> мою работу</div>
                                             </div>
                                         </div>
                                         <div class="swiper-slide">
@@ -466,8 +536,8 @@
                                                 <div class="review__bline"></div>
                                                 <div class="review__left"></div>
                                                 <div class="review__quotes"><img src="img/quotes-start.png" alt="" /><img src="img/quotes-end.png" alt="" /></div>
-                                                <div class="review__text">Хотел бы поделиться своими впечатлениями по поводу программы Marketplace Convert:</div>
-                                                <div class="review__author">Лучше я не знаю 4</div>
+                                                <div class="review__text">Вручную выгружал максимум 3-4 товара в час -</div>
+                                                <div class="review__author">сейчас получается 30-40 с тем же качеством</div>
                                             </div>
                                         </div>
                                     </div>
@@ -655,13 +725,18 @@
                             <div class="audience__wrapper">
                                 <div class="audience__header"><img src="img/audience-2.png" alt="" /></div>
                                 <div class="audience__content">
-                                    <div class="audience__for">После мастер-класса вы начнете развивать свой магазин с новой скоростью:</div>
+                                    <div class="audience__for">Вы получите все необходимые знания, чтобы начать собственный успешный бизнес:</div>
                                     <div class="audience__list">
                                         <ul class="list-check">
-                                            <li class="list-check__item">Загружать по 10 000 товаров за 72 часа контролировать остатки товаров одновременно у многих поставщиков</li>
-                                            <li class="list-check__item">Проходить модерацию за 14 дней благодаря правильной структуре XML файла</li>
-                                            <li class="list-check__item">Контролировать цены на товары и массово их изменять</li>
-                                            <li class="list-check__item">Узнаете, как параметры и характеристики товаров влияют на продвижение</li>
+                                            <li class="list-check__item">Вас ждет пошаговая видеоинструкция, как начать продавать на Розетке
+
+                                                </li>
+                                            <li class="list-check__item">Пошаговая видеоинструкция, как искать поставщиков и подбирать товары для продаж
+</li>
+                                            <li class="list-check__item">Получите контакты проверенных поставщиков на 500 000 наименований товара</li>
+                                            <li class="list-check__item">Пошаговая инструкция приема и обработки заказов</li>
+                                            <li class="list-check__item"> Разбор методов увеличения продаж, обзор 
+                                                факторов влияющих на продажи</li>
                                         </ul>
                                     </div>
                                     <div class="audience__act"><button class="button button_a" data-modal="modal-1"><span>Принять участие</span></button></div>

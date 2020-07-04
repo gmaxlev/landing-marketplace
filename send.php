@@ -4,7 +4,8 @@
         Список адресов
     */
     $recipients = array(
-        "gmaxlev@gmail.com"
+        "info@xmlreactor.shop"
+       
     );
 
 
@@ -27,7 +28,7 @@
     
     $mail['charset'] = "utf-8";
     $mail['to'] = implode(',', $recipients);
-    $mail['subject'] = 'Новый клиент!';
+    $mail['subject'] = 'Новый клиент для Marketplace Convert!';
     $mail['massage'] = $text_message;
     
     $mail['header'] = "MIME-Version: 1.0\n"

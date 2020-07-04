@@ -9,7 +9,7 @@ window._breakpoints = {
   xl: 1200
 };
 
-$(document).ready(function() {
+$(document).ready(function() {  
   new WOW().init();
 
   /**
@@ -82,6 +82,49 @@ $(document).ready(function() {
       breakpoints: {
         [_breakpoints["xl"]]: {
           slidesPerView: 4
+        }
+      }
+    });
+  })();
+
+    /**
+   * Слайдер "Примеры"
+   */
+  (function() {
+    new Swiper("#slider-examples", {
+      slidesPerView: 2,
+      spaceBetween: 30,
+      centeredSlides: true,
+      roundLengths: true,
+      loop: true,
+      loopAdditionalSlides: 30,
+      breakpoints: {
+        [_breakpoints["xl"]]: {
+          slidesPerView: 4
+        }
+      }
+    });
+  })();
+
+    /**
+   * Слайдер "Магазини"
+   */
+  (function() {
+    new Swiper("#slider-shops", {
+      slidesPerView: 1,
+      spaceBetween: 0,
+      centeredSlides: true,
+      roundLengths: false,
+      loop: false,
+      navigation: {
+        nextEl: "#shops-next",
+        prevEl: "#shops-prev"
+      },
+      pagination: {
+        el: "#shops-pagination",
+        clickable: true,
+        renderBullet: function(index, className) {
+          return '<span class="' + className + '"></span>';
         }
       }
     });
@@ -208,7 +251,8 @@ $(document).ready(function() {
           },
           errorPlacement: showError,
           submitHandler: function(form) {
-            $.ajax({
+            
+           $.ajax({
               url: "send.php",
               type: "POST",
               data: {
@@ -234,19 +278,22 @@ $(document).ready(function() {
                 $(form)
                   .siblings(".form-send-success")
                   .addClass("form-send-success_show");
-                setTimeout(function() {
+               /* setTimeout(function() {
                   var id = $(form)
                     .closest(".modal")
                     .attr("id");
                   closeModal(id);
-                }, 2000);
+                }, 2000);*/
               },
               error: function() {
                 $(form)
                   .siblings(".form-send-error")
                   .slideDown(500);
               }
+              
             });
+
+  
           }
         });
     });
@@ -292,3 +339,4 @@ $(document).ready(function() {
     });
   })();
 });
+
