@@ -220,6 +220,7 @@ $(document).ready(function() {
    */
   (function() {
     $(".form-modal-1").each(function() {
+      var formContainer = this;
       $(this)
         .submit(function(e) {
           e.preventDefault();
@@ -278,6 +279,10 @@ $(document).ready(function() {
                   .val()
               },
               success: function() {
+                formCrm(
+                  new FormData(formContainer),
+                  $(formContainer).attr("data-href")
+                );
                 $(form)
                   .find(".input-text, .textarea")
                   .prop("disabled", true)
@@ -289,9 +294,10 @@ $(document).ready(function() {
                   .siblings(".form-send-success")
                   .addClass("form-send-success_show");
 
-                  fbq('track', 'CompleteRegistration', {currency: "USD", value: 2.00});
-
-
+                fbq("track", "CompleteRegistration", {
+                  currency: "USD",
+                  value: 2.0
+                });
 
                 /* setTimeout(function() {
                   var id = $(form)
@@ -350,11 +356,11 @@ $(document).ready(function() {
       );
     });
   })();
-})
-  /**
-   * Маска для номера телефона
-   */
-  /*(function() {
+});
+/**
+ * Маска для номера телефона
+ */
+/*(function() {
     $(".phone-mask").mask("+38 (000) 000 00 00", {
       placeholder: "+38 (___) ___ __ __"
     });
