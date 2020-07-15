@@ -288,6 +288,11 @@ $(document).ready(function() {
                 $(form)
                   .siblings(".form-send-success")
                   .addClass("form-send-success_show");
+
+                  fbq('track', 'CompleteRegistration', {currency: "USD", value: 2.00});
+
+
+
                 /* setTimeout(function() {
                   var id = $(form)
                     .closest(".modal")
@@ -345,13 +350,13 @@ $(document).ready(function() {
       );
     });
   })();
-
+})
   /**
    * Маска для номера телефона
    */
-  (function() {
+  /*(function() {
     $(".phone-mask").mask("+38 (000) 000 00 00", {
       placeholder: "+38 (___) ___ __ __"
     });
   })();
-});
+});*/
